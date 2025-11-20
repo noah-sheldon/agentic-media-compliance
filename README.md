@@ -1,6 +1,6 @@
 # Agentic Media Compliance
 
-Agentic Media Compliance is a multi-agent AML adverse media screening engine that produces an auditable verdict for any news article. Ideal for KYC/AML, onboarding, and investigative workflows. Multi-agent AML adverse media screening tool with a FastAPI backend and a Next.js + shadcn UI. Analysts submit a subject name, optional DOB, and an article URL to receive an auditable verdict. A separate **Tests** view visualises curated regression cases stored under `backend/tests/results`.
+Agentic Media Compliance is a multi-agent AML adverse media screening engine that produces an auditable verdict for any news article. Ideal for KYC/AML, onboarding, and investigative workflows. Analysts submit a subject name, optional DOB, and an article URL to receive an explainable verdict, while a separate **Tests** view visualises curated regression cases stored under `backend/tests/results`.
 
 ## Contents
 
@@ -35,12 +35,8 @@ Agents:
 git clone https://github.com/noah-sheldon/agentic-media-compliance.git
 cd agentic-media-compliance
 
-# Populate backend/.env with OPENAI_API_KEY, AML_SCREENING_MODEL etc.
-cat <<'EOF' > backend/.env
+# Populate .env with OPENAI_API_KEY
 OPENAI_API_KEY=sk-your-key
-AML_SCREENING_MODEL=gpt-4.1-mini
-API_CORS_ORIGINS=http://localhost:3000
-EOF
 
 docker compose up --build
 ```
@@ -50,41 +46,8 @@ docker compose up --build
 
 Environment variables for docker compose:
 
-- `backend/.env` – `OPENAI_API_KEY`, `AML_SCREENING_MODEL`, `API_CORS_ORIGINS`
+- `.env` – `OPENAI_API_KEY`
 - `frontend` service consumes `NEXT_PUBLIC_API_BASE` (set in `docker-compose.yml`)
-
-## Manual Setup
-
-### Backend
-
-```bash
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-export OPENAI_API_KEY=sk-...        # REQUIRED
-export AML_SCREENING_MODEL=gpt-4.1-mini  # optional
-export API_CORS_ORIGINS="http://localhost:3000"
-uvicorn main:app --reload
-```
-
-Key endpoints:
-
-- `POST /api/run_screening` – Body `{name, url, dob?}` → returns `FinalScreeningDecision` + `details`
-- `GET /api/tests` – Reads cached JSON snapshots from `tests/results/*.json`
-- `GET /api/health` – Simple liveness probe
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-NEXT_PUBLIC_API_BASE="http://localhost:8000/api" npm run dev
-```
-
-Routes:
-
-- `/` – Screening form, results with shadcn cards (risk badges, audit notes, metadata, people, context, name, DOB, sentiment, article text)
-- `/tests` – Filterable gallery (search, risk, match, edge case reason) of stored regression outputs
 
 ## Backend Reference
 
@@ -93,14 +56,6 @@ Routes:
 - `utils/test_results.py` – Loads all JSON snapshots for `/api/tests`
 - `tests/test_screening_pipeline.py` – Executes entire pipeline for each entry in `tests/test_dataset.json` and saves results to `tests/results/<subject>.json`
 
-Run structural checks (already executed during development):
-
-```bash
-cd backend
-PYTHONPYCACHEPREFIX=$(pwd)/.pycache_tmp python3 -m py_compile \
-    main.py pipeline/orchestrator.py utils/test_results.py
-rm -rf .pycache_tmp
-```
 
 ## Frontend Reference
 
@@ -124,84 +79,161 @@ Each run stores a snapshot under `backend/tests/results/<subject>.json` consumed
 
 ## Screenshots
 
-| Screen | Description |
-|--------|-------------|
-| ![Screening Input](frontend/public/screening_input.png) | Main screening form where analysts enter subject name, DOB, and article URL |
-| ![Results Overview](frontend/public/results_overview.png) | Comprehensive analysis results with risk assessment and decision summary |
-| ![Tests UI](frontend/public/tests-ui.png) | Test gallery with pagination, filters, and detailed test case views |
-| ![Audit Results](frontend/public/audit_results.png) | Detailed audit trail with agent reasoning and evidence tracking |
-| ![Sentiment Analysis](frontend/public/sentiment.png) | Sentiment analysis breakdown with confidence scores |
-| ![Article Metadata](frontend/public/metadata_article.png) | Extracted article metadata and context information |
+| Screen                                                    | Description                                                                 |
+| --------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![Screening Input](frontend/public/screening_input.png)   | Main screening form where analysts enter subject name, DOB, and article URL |
+| ![Results Overview](frontend/public/results_overview.png) | Comprehensive analysis results with risk assessment and decision summary    |
+| ![Tests UI](frontend/public/tests-ui.png)                 | Test gallery with pagination, filters, and detailed test case views         |
+| ![Audit Results](frontend/public/audit_results.png)       | Detailed audit trail with agent reasoning and evidence tracking             |
+| ![Sentiment Analysis](frontend/public/sentiment.png)      | Sentiment analysis breakdown with confidence scores                         |
+| ![Article Metadata](frontend/public/metadata_article.png) | Extracted article metadata and context information                          |
 
 ## Missing Data Enrichment Strategy (Part 2)
 
-To automate enrichment when core identifiers (DOB, middle names, occupations, locations) are absent, we propose a multi-tier pipeline:
+Real-world adverse-media screening often encounters incomplete articles: missing DOB, middle names, occupations, aliases, or only approximate ages (“a 45-year-old investor”). To avoid both false positives and false negatives, the system can be extended with a dedicated enrichment pipeline that augments the existing agents with controlled web search + structured extraction. (This enrichment stack is not yet implemented, but the design below aligns with the current architecture.)
 
-1. **Attribute Detector** – Flag missing concepts (DOB, middle name, occupation, location) before issuing any search. Example:
+### Why Enrichment Is Needed
 
-   ```ts
-   const missing = {
-     dob: !articleContainsDOB,
-     middleName: !articleContainsMiddleName,
-     occupation: !articleContainsOccupation,
-     location: !articleContainsLocation,
-   };
-   ```
+- No explicit DOB, only age mentions.
+- Middle names or aliases omitted.
+- Article lacks occupation or location context.
+- Multiple individuals share the same name (e.g., “John Smith”).
 
-2. **Tiered Search Stack**
+The enrichment service targets exactly these gaps, pulling identifiers from authoritative sources and providing auditable evidence.
 
-| Tier | Source Type                | Examples                                                         | Confidence                   |
-| ---- | -------------------------- | ---------------------------------------------------------------- | ---------------------------- |
-| 1    | Structured knowledge       | Wikipedia, Wikidata, Crunchbase, Companies House (SPARQL / REST) | ≥0.95                        |
-| 2    | Professional profiles      | LinkedIn, Bloomberg, PitchBook                                   | 0.85–0.95                    |
-| 3    | News archives              | Reuters, BBC, Financial Times                                    | 0.75–0.90                    |
-| 4    | Conversational aggregators | Perplexity, You.com, Kagi                                        | 0.80–0.95                    |
-| 5    | Public records             | Business filings, voter registers, court records                 | ≥0.90 (jurisdiction-limited) |
-
-- Prefer Perplexity or Serper.dev early to aggregate multiple domains before scraping.
-
-3. **Query Strategy** – LLM generates adaptive queries based on missing attributes and optional subject metadata (country, employer, etc.).
-
-4. **Candidate Processing** – Fetch top N results through a proxy, extract text (Readability/Cheerio), capture titles, URLs, publication dates, and relevant sentences. Hash/cache results to avoid re-fetching.
-
-5. **Entity Extraction** – NER prompt over snippets produces normalized fields (DOB, occupation, location, education, source URL, confidence).
-
-6. **Cross-Verification** – Compare enriched attributes vs article data to adjust confidence (reward matches, penalize conflicts) and compute a weighted score:
-
-   ```
-   finalConfidence =
-     sourceWeight * sourceReputation +
-     attributeConsistency * 0.4 +
-     textualEvidence * 0.3;
-   ```
-
-7. **Analyst Output** – UI table showing value, source, and confidence, with tooltips for raw snippets and domain reputation. Example:
-
-| Attribute  | Value          | Source        | Confidence |
-| ---------- | -------------- | ------------- | ---------- |
-| DOB        | 1984-07-21     | wikipedia.org | 0.95       |
-| Occupation | CFO – Acme Ltd | linkedin.com  | 0.89       |
-
-8. **Middle Name Discovery** – Query expansions (`"John A. Smith"`, `"John Alexander Smith"`, `alias`, `nickname`) + frequency scoring, then normalized by LLM.
-
-9. **DOB Inference** – Use direct mentions, age references, education dates, and career milestones to triangulate DOB (median of derived values).
-
-10. **Service Architecture** – Dedicated Enrichment Orchestrator:
+### Architecture — Enrichment Orchestrator
 
 ```
 Client Request
    ↓
-[ Orchestrator ]
-   ↳ Attribute Detector
+Existing Screening Pipeline
+   ↓
+[ Attribute Detector → Should Enrich? ]
+   ↓
+[ Enrichment Orchestrator ]
+   ↳ Query Generator Agent
    ↳ Search Agent (Perplexity → Serper → fallback)
    ↳ Scraper / Parser
-   ↳ Entity Extractor (LLM/Regex)
-   ↳ Cross-Verifier
-   ↳ Cache + Store
-   ↳ Output
+   ↳ Entity Extraction Agent
+   ↳ Cross-Verification Engine
+   ↳ Cache & Provenance Store
+   ↓
+Enriched Attributes (DOB, middle name, occupation…)
+   ↓
+Final Decision Agent (higher confidence)
 ```
 
-All steps log provenance (URL, timestamp, snippet) for auditability, support rate limiting, and expose TTL-based caching so repeated names don’t trigger redundant work. Low-confidence enrichments can be queued for human review.
+The orchestrator mirrors the current multi-agent pattern, so plug-in integration is straightforward: when base agents detect missing data, the enrichment chain fires and feeds structured results back into the final decision.
+
+### 1. Attribute Detector (What’s Missing?)
+
+Before requesting any search, the system flags gaps:
+
+```json
+{
+  "needs_enrichment": true,
+  "missing": {
+    "dob": true,
+    "middle_name": true,
+    "occupation": false,
+    "location": false
+  }
+}
+```
+
+Only `true` fields trigger enrichment, keeping the process efficient and auditable.
+
+### 2. Tiered Search Stack (High → Low Trust)
+
+| Tier | Source Type | Examples | Typical Confidence |
+| --- | --- | --- | --- |
+| 1 | Structured knowledge | Wikipedia, Wikidata, Companies House | ≥ 0.95 |
+| 2 | Professional profiles | LinkedIn, Bloomberg, PitchBook | 0.85–0.95 |
+| 3 | News archives | BBC, Reuters, Financial Times | 0.75–0.90 |
+| 4 | Aggregators | Perplexity, Kagi, You.com | 0.80–0.95 |
+| 5 | Public records | Business filings, court databases | ≥ 0.90 |
+
+Higher-tier sources override lower-tier ones. The preferred integration order is **Perplexity → Serper.dev → fallback Bing Search**, which provides structured snippets and citations without scraping Google directly.
+
+### 3. Query Generator Agent
+
+An LLM generates adaptive queries based on missing attributes and any known metadata (e.g., country, employer):
+
+- `"<name>" date of birth`
+- `"<name>" middle name`
+- `"<alias>" real identity`
+- `"<name>" occupation OR biography`
+- `"<name>" fraud case details`
+
+### 4. Candidate Processing & Scraping
+
+The top N (3–5) search results are fetched via proxy, cleaned via the existing BeautifulSoup + Readability stack, and normalized:
+
+```json
+{
+  "url": "...",
+  "domain": "wikipedia.org",
+  "pub_date": "2021-06-14",
+  "clean_text": "...",
+  "source_reputation": 0.95
+}
+```
+
+Untrusted domains (SEO spam, forums) are discarded.
+
+### 5. Entity Extraction Agent
+
+This agent runs over the cleaned snippets to extract DOB, middle names, aliases, occupations, employers, and historical roles, returning structured JSON with per-field confidence and provenance:
+
+```json
+{
+  "dob": {
+    "value": "1955-12-18",
+    "confidence": 0.94,
+    "source": "wikipedia.org"
+  },
+  "aliases": ["Viju"],
+  "occupation": "Businessman"
+}
+```
+
+### 6. Cross-Verification Against Article Context
+
+Enriched attributes are compared against the article’s context:
+
+- Article says “UK aviation tycoon”; enrichment finds “US academic” → reject.
+- Article mentions alias “Viju”; enrichment confirms alias → boost confidence.
+- Article implies “in their 40s”; enrichment DOB indicates 70-year-old → penalize.
+
+Final confidence might be calculated as:
+
+```
+finalConfidence =
+    sourceReputation * 0.3 +
+    attributeConsistency * 0.4 +
+    textualEvidence * 0.3
+```
+
+Only values ≥ ~0.75 are retained to avoid identity contamination.
+
+### 7. Caching + Provenance Logging
+
+All enrichment results are cached with URL, timestamp, snippets, source reputation, and agent reasoning so analysts can audit exactly where each attribute came from. TTL-based caching prevents repeated queries for the same subject.
+
+### 8. UI Exposure (Planned)
+
+A future `/enrichment` section (or an expansion of the existing result drill-down) will display enriched attributes such as:
+
+| Attribute | Value | Source | Confidence | Snippet |
+| --- | --- | --- | --- | --- |
+| DOB | 1955-12-18 | wikipedia.org | 0.94 | “Born 18 December 1955…” |
+| Alias | “Viju” | bbc.co.uk | 0.82 | “…popularly known as ‘Viju’…” |
+
+Each row links back to the source URL, preserving analyst trust.
+
+---
+
+This proposed enrichment pipeline keeps the primary tool responsive while enabling optional, audit-friendly augmentation for incomplete articles.
 
 ## Known Gaps / Future Work
 
@@ -210,4 +242,3 @@ All steps log provenance (URL, timestamp, snippet) for auditability, support rat
 - **Persistent storage** – Screening results are transient. Consider storing reports + audit trails in a database.
 - **Testing** – No automated unit tests beyond the dataset replay. Add mock-based tests covering agent parsing and frontend components.
 - **Observability** – Add structured logging/metrics (OpenTelemetry) for agent latency and error tracking.
-- **Screenshot assets** – Replace placeholder references in the Screenshots section with real captures under `docs/`.
