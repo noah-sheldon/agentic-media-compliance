@@ -1,7 +1,7 @@
 # aml_agents/article_metadata_agent.py
 from agents import Agent
 from models.article_metadata import ArticleMetadataResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 article_metadata_agent = Agent(
     name="article_metadata_agent",

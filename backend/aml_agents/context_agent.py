@@ -1,7 +1,7 @@
 # aml_agents/context_agent.py
 from agents import Agent
 from models.context import ContextExtractionResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 context_extraction_agent = Agent(
     name="context_extraction_agent",

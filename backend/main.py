@@ -51,7 +51,7 @@ async def healthcheck() -> Dict[str, str]:
 @app.post(f"{API_PREFIX}/run_screening")
 async def run_screening_endpoint(payload: ScreeningPayload) -> Dict[str, Any]:
     try:
-        result = run_screening(payload.name, payload.dob, payload.url)
+        result = await run_screening(payload.name, payload.dob, payload.url)
     except Exception as exc:  # pragma: no cover - FastAPI handles propagation
         raise HTTPException(status_code=500, detail=f"Screening failed: {exc}") from exc
     return result

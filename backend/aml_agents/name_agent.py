@@ -1,6 +1,6 @@
 from agents import Agent
 from models.name_match import NameMatchResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 name_match_agent = Agent(
     name="name_match_agent",

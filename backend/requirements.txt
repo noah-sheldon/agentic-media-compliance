@@ -5,3 +5,5 @@ python-dotenv
 openai-agents
 fastapi
 uvicorn
+beautifulsoup4
+lxml

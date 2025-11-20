@@ -1,6 +1,6 @@
 from agents import Agent
 from models.dob_age import DobAgeMatchResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 dob_age_agent = Agent(
     name="dob_age_agent",

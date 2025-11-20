@@ -33,7 +33,7 @@ Use ONLY the information above. Do not fabricate new facts.
 """
 
 
-def run_screening(name: str, dob: Optional[str], url: str) -> Dict[str, Any]:
+async def run_screening(name: str, dob: Optional[str], url: str) -> Dict[str, Any]:
     logger.info(
         "Starting screening for subject='%s', dob='%s', url=%s",
         name,
@@ -56,22 +56,22 @@ def run_screening(name: str, dob: Optional[str], url: str) -> Dict[str, Any]:
 
     # 2) Run specialist agents
     logger.info("Running ArticleMetadataAgent…")
-    metadata_result = Runner.run_sync(article_metadata_agent, prompt).final_output
+    metadata_result = (await Runner.run(article_metadata_agent, prompt)).final_output
 
     logger.info("Running PersonExtractionAgent…")
-    person_result = Runner.run_sync(person_extraction_agent, prompt).final_output
+    person_result = (await Runner.run(person_extraction_agent, prompt)).final_output
 
     logger.info("Running ContextExtractionAgent…")
-    context_result = Runner.run_sync(context_extraction_agent, prompt).final_output
+    context_result = (await Runner.run(context_extraction_agent, prompt)).final_output
 
     logger.info("Running NameMatchAgent…")
-    name_result = Runner.run_sync(name_match_agent, prompt).final_output
+    name_result = (await Runner.run(name_match_agent, prompt)).final_output
 
     logger.info("Running DobAgeAgent…")
-    dob_result = Runner.run_sync(dob_age_agent, prompt).final_output
+    dob_result = (await Runner.run(dob_age_agent, prompt)).final_output
 
     logger.info("Running SentimentAgent…")
-    sentiment_result = Runner.run_sync(sentiment_agent, prompt).final_output
+    sentiment_result = (await Runner.run(sentiment_agent, prompt)).final_output
 
     # 3) Build final decision prompt (you can extend this later to include metadata/context/person if desired)
     decision_prompt = f"""
@@ -91,7 +91,7 @@ Produce a FinalScreeningDecision JSON object only.
     logger.debug(f"Decision prompt:\n{decision_prompt}")
 
     logger.info("Running DecisionAgent…")
-    final = Runner.run_sync(decision_agent, decision_prompt).final_output
+    final = (await Runner.run(decision_agent, decision_prompt)).final_output
 
     logger.info(
         f"DecisionAgent completed: decision={final.decision}, "

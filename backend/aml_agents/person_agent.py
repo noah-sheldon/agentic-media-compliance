@@ -1,7 +1,7 @@
 # aml_agents/person_agent.py
 from agents import Agent
 from models.person import PersonExtractionResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 person_extraction_agent = Agent(
     name="person_extraction_agent",

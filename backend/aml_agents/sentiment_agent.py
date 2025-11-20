@@ -1,6 +1,6 @@
 from agents import Agent
 from models.sentiment import SentimentResult
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 sentiment_agent = Agent(
     name="sentiment_agent",

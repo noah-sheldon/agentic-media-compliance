@@ -1,6 +1,6 @@
 from agents import Agent
 from models.decision import FinalScreeningDecision
-from backend.config import DEFAULT_MODEL
+from config import DEFAULT_MODEL
 
 decision_agent = Agent(
     name="final_decision_agent",
