@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is an AML (Anti-Money Laundering) compliance screening system with two main components:
 
-1. **Python Backend** (`/` root): Agentic AML screening pipeline using OpenAI Agents framework
-2. **Next.js Frontend** (`/app/`): React-based UI for screening results
+1. **Python Backend** (`/backend/`): FastAPI service with agentic AML screening pipeline using OpenAI Agents framework
+2. **Next.js Frontend** (`/frontend/`): React-based UI for screening results
 
 ### Core Architecture
 
@@ -42,9 +42,9 @@ pytest tests/test_screening_pipeline.py
 pip install -r requirements.txt
 ```
 
-### Next.js Frontend (from /app directory)
+### Next.js Frontend (from /frontend directory)
 ```bash
-# Development server
+# Development server  
 npm run dev
 
 # Build for production
@@ -57,19 +57,32 @@ npm start
 npm run lint
 ```
 
+### Docker
+```bash
+# Build and run both services
+docker-compose up --build
+
+# Backend only
+docker build -t backend . && docker run -p 8000:8000 --env-file .env backend
+
+# Frontend only
+docker build -t frontend ./frontend && docker run -p 3000:3000 frontend
+```
+
 ## Development Environment
 
-- Python virtual environment: `.venv/`
-- Environment variables: `.env` file required
-- Test configuration: `pytest.ini` sets pythonpath to project root
-- Dependencies: `requirements.txt` includes OpenAI Agents framework
+- Environment variables: `.env` file required in root
+- Backend dependencies: `backend/requirements.txt` includes OpenAI Agents framework
+- Frontend dependencies: `frontend/package.json` with Next.js and Tailwind CSS
+- Test configuration: `backend/pytest.ini` sets pythonpath to project root
 
 ## Key Files
 
-- `main.py`: Entry point demonstrating pipeline usage
-- `pipeline/orchestrator.py:35`: Main screening orchestration function
-- `tests/test_screening_pipeline.py`: Integration tests with dataset
-- `config.py`: Model configuration
-- `logging_config.py`: Logging setup
+- `backend/main.py`: FastAPI entry point with API endpoints
+- `backend/pipeline/orchestrator.py:35`: Main screening orchestration function
+- `backend/tests/test_screening_pipeline.py`: Integration tests with dataset
+- `backend/config.py`: Model configuration
+- `backend/logging_config.py`: Logging setup
+- `frontend/src/`: Next.js app with UI components
 
 The system processes a subject (name, DOB) and article URL through multiple specialized agents to produce a comprehensive AML screening decision with detailed analysis.
