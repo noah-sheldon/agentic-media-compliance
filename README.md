@@ -1,6 +1,6 @@
 # Agentic Media Compliance
 
-Multi-agent AML adverse media screening tool with a FastAPI backend and a Next.js + shadcn UI. Analysts submit a subject name, optional DOB, and an article URL to receive an auditable verdict. A separate **Tests** view visualises curated regression cases stored under `backend/tests/results`.
+Agentic Media Compliance is a multi-agent AML adverse media screening engine that produces an auditable verdict for any news article. Ideal for KYC/AML, onboarding, and investigative workflows. Multi-agent AML adverse media screening tool with a FastAPI backend and a Next.js + shadcn UI. Analysts submit a subject name, optional DOB, and an article URL to receive an auditable verdict. A separate **Tests** view visualises curated regression cases stored under `backend/tests/results`.
 
 ## Contents
 
