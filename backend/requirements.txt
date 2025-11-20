@@ -1,0 +1,7 @@
+pytest
+pydantic
+requests
+python-dotenv
+openai-agents
+fastapi
+uvicorn
