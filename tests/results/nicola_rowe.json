@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Age/Date Confusion in Money Laundering Case",
+    "input": {
+      "edge_case_type": "Conflicting DOB vs age",
+      "title": "Age/Date Confusion in Money Laundering Case",
+      "summary": "Nicola Rowe, sentenced for laundering timeshare fraud proceeds, had conflicting age and DOB details listed between court and press reporting.",
+      "subject_names": [
+        "Nicola Rowe"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/articles/cvgvxg47gl6o"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.925,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article clearly matches the subject Nicola Rowe with high confidence based on an exact name match and consistent contextual details, including age. The article is adverse, detailing convictions related to money laundering and a major fraud scheme. The significant negative impact and criminal charges warrant high risk escalation.",
+      "audit_notes": "- NameMatchResult: High confidence (0.95) due to exact name match and contextual alignment with subject's profile.\n- DobAgeMatchResult: High confidence (0.9) in age consistency despite missing DOB; age aligns with article.\n- SentimentResult: Adverse media identified with criminal fraud and money laundering charges, indicating high risk.",
+      "details": {
+        "metadata": {
+          "title": "\u00a328m timeshare fraud: Nicola and Mark Rowe convicted",
+          "published_date": "2025-10-17",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article's publication date is clearly stated as 17 October 2025. It involves crime details relating to Nicola Rowe and Mark Rowe convicted of timeshare fraud. The source domain is from the URL (bbc.co.uk). The content and date indicate recent relevance for AML screening."
+        },
+        "people": {
+          "main_person": "Mark Rowe",
+          "other_people": [
+            "Nicola Rowe",
+            "Des",
+            "Peter Highway",
+            "Gayle Ramsay",
+            "Jodi Beard",
+            "Paul Harrison",
+            "Nihat Salih",
+            "Lisa Salih",
+            "Samantha Macaulay",
+            "Simon Walker",
+            "Joanne Physick",
+            "David Taylor",
+            "Joanne Taylor",
+            "Lee Evans",
+            "Barrie Fox",
+            "Josephine Cuthill-Fox",
+            "Nikki Mitchell",
+            "Stephen Stafford",
+            "Judge Alexander Milne"
+          ],
+          "author_names": [
+            "Nikki Mitchell",
+            "Stephen Stafford"
+          ],
+          "reasoning": "The article primarily focuses on Mark Rowe as the central figure responsible for orchestrating a large timeshare fraud. Nicola Rowe, his wife, is also mentioned as a co-convicted party but the main narrative revolves around Mark Rowe's role in the conspiracy and its impact on victims. The article discusses Mark Rowe's actions, convictions, and sentencing extensively, indicating he is the main person. Other individuals are victims, officials, or co-defendants. The authors are Nikki Mitchell and Stephen Stafford, identified in the byline."
+        },
+        "context": {
+          "locations": [
+            "Hampshire",
+            "Bournemouth",
+            "York",
+            "Stratford-on-Avon",
+            "Tenerife"
+          ],
+          "organisations": [
+            "Sell My Timeshare"
+          ],
+          "roles_or_occupations": [
+            "managing director"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "Nicola Rowe is clearly linked as the wife of Mark Rowe, managing director of Sell My Timeshare, living in Hampshire, involved in the timeshare fraud with offices in Bournemouth, York, Stratford-on-Avon, and Tenerife. The article directly names her in connection with the fraud and these locations and organisation, supporting consistency with the subject details."
+        },
+        "name_match": {
+          "subject_name_normalized": "nicola rowe",
+          "article_primary_names": [
+            "Mark Rowe",
+            "Nicola Rowe"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The article's main subject includes Nicola Rowe, explicitly named as \"managing director Mark Rowe and his wife Nicola,\" both involved in the \u00a328m timeshare fraud. The text states, \"Nicola Rowe received a two-year suspended jail sentence,\" confirming her central role. The subject name 'Nicola Rowe' exactly matches the article's 'Nicola Rowe,' with no conflicting details presented. Both are linked to Hampshire and involved in fraud, consistent with the screening profile. This high name similarity and detailed shared context support a strong potential match."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 54,
+          "age_phrase": "both 54",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article states 'both 54 and from Hampshire' referring to Mark Rowe and his wife Nicola. Subject Nicola Rowe is mentioned with age 54 but no DOB is provided in subject data; consistency cannot be confirmed without subject DOB."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "money laundering",
+            "criminal charges"
+          ],
+          "key_positives": [],
+          "key_negatives": [
+            "Nicola Rowe was convicted of money laundering.",
+            "She was involved in a \u00a328m timeshare fraud.",
+            "The scheme exploited vulnerable elderly victims.",
+            "She received a two-year suspended jail sentence."
+          ],
+          "reasoning": "The article states that Nicola Rowe, along with her husband Mark Rowe, was convicted over a \u00a328m timeshare fraud exploiting elderly victims. She pled guilty to money laundering and received a suspended jail sentence. The report describes the scheme as 'elaborate' and highlights the financial and emotional harm caused to thousands of people."
+        },
+        "article_text": "Image caption, Des said finding out he had been scammed was \"like a kick in the guts\" Nikki Mitchell South of England home affairs correspondent, and Stephen Stafford South of England Published 17 October 2025 A man duped out of \u00c2\u00a314,000 has said those responsible are \"scum\", as the shocking scale of a \u00c2\u00a328m timeshare fraud involving more than 3,500 victims is revealed. Fourteen people, including managing director Mark Rowe and his wife Nicola, have been convicted over the scheme which operated under the Sell My Timeshare brand. The couple, both 54 and from Hampshire, bankrolled a lavish lifestyle by exploiting vulnerable victims - many in their 70s and 80s - who were desperate to sell their holiday homes. Des, 73, from south London, told the BBC the moment he realised he had lost thousands felt \"like a kick in the guts\" - a devastating setback that forced him to delay his retirement. The \"elaborate\" and \"complex\" fraud, which began in 2013, is thought to be one of the biggest conspiracies of its kind in the UK. Timeshares usually involve paying a one-off lump sum, plus annual maintenance fees, in return for being able to use a property for an agreed number of weeks each year, every year for life. Media caption, Mark Rowe spent his victims' cash on advertising, glossy brochures and virtual offices Predominantly in the 1980s and 1990s, timeshares were marketed as holidays without the hassle, and many investors were told they would increase in value and be easy to get out of, whenever they wanted. As owners aged or suffered failing health, many found they could no longer use the homes or afford the rising maintenance payments and wanted to dispose of them. These are the people Mark Rowe and his accomplices targeted, the Crown Prosecution Service (CPS) said. Victims were \"lured\" with offers of exchanging their timeshares for \"Monster Credits\" which promised holiday discounts and shopping vouchers. It was claimed these would grow in value and be tradable at a future date. Clients typically invested about \u00c2\u00a38,000 each. They would later discover not only were the credits \"worthless\", but in most cases, they still owned and incurred the costs of their timeshares. Police investigators described \"high-pressure\" sales meetings in offices in Bournemouth, York, Stratford-on-Avon or Tenerife, which often lasted up to six hours. Image source, SWROCU Mark and Nicola Rowe lived a lavish lifestyle from the profits of their crimes In total, 3,583 people across the UK were defrauded out of \u00c2\u00a328.1m, with the highest individual loss being \u00c2\u00a380,000. Nearly 500 victims lost more than \u00c2\u00a310,000. Most were aged between 60 and 80, with some in their 90s. Des, from Mitcham, recalled how he was persuaded to take out a loan by the company. The police have asked us not to reveal his surname. The former engineer had been trying to sell his family's timeshares in Tenerife and was alerted to the con by the police. \"We were devastated because I wanted to retire at the time, but now I couldn't afford to,\" he said. \"I was absolutely gutted and every phone call I made to the Bournemouth office, I got fobbed off.\" Des, who branded the fraudsters \"scum\", said: \"How do these people sleep at night? \"They don't care about us normal people. They're greedy, they get greedier and they're living their life of luxury from their ill-gotten gains.\" Victims were persuaded to buy so-called Monster Rewards which were \"worthless\" Mark Rowe spent millions of pounds of his victims' cash on advertising, glossy brochures, websites, virtual offices, accomplices and unsuspecting employees - things that police and prosecutors say made the brand look like a \"highly credible\" and \"prestige\" enterprise. But Mark and Nicola Rowe had \u00c2\u00a38m from the fraud paid into their personal bank accounts. Their spending included almost \u00c2\u00a31m on home, garden and stable improvements, \u00c2\u00a3185,000 on art, including a pencil sketch by the artist LS Lowry, and \u00c2\u00a326,000 on private jet hire. Mark Rowe was jailed for seven-and-a-half years in August after being found guilty of conspiracy to defraud. Passing sentence, Judge Alexander Milne called him \"profoundly dishonest\" and a \"corrupting influence\" who had \"left a trail of misery\". \"The anger, embarrassment and humiliation of the clients who realised they had been duped was palpable in court,\" he said. Mark and Nicola Rowe's \u00c2\u00a32.4m Hampshire home, which has since been sold, was financed by their fraud Nicola Rowe received a two-year suspended jail sentence at Southwark Crown Court after pleading guilty to money laundering. Senior investigating officer Peter Highway, from the South West Regional Organised Crime Unit, described how Mark Rowe continually invented new methods to deceive. \"He paid for TV and magazine ads, put victims up in hotels and even created fake virtual offices and fake personas,\" he said. A BBC Scotland investigation uncovered evidence in 2016 that ageing timeshare owners were having problems relinquishing their contracts. Gayle Ramsay, from the CPS, said some of the victims had died before seeing justice. She said the criminals had \"acted in a completely selfish and manipulative manner to make huge sums for themselves\" while exploiting elderly timeshare owners. She added the victims had been left tens of thousands of pounds out of pocket after purchasing something which was worthless. Twelve other people were also convicted: Jodi Beard, 43, of El Roque, Tenerife, two years' imprisonment suspended for two years after being found guilty of conspiracy to defraud Paul Harrison, 55, of Weymouth, four-and-a-half years' imprisonment after being found guilty of conspiracy to defraud Nihat Salih, 57, of Poole, Dorset, three years' imprisonment after being found guilty of conspiracy to defraud Lisa Salih, 56, of Poole, two years' imprisonment suspended for two years after being found guilty of conspiracy to defraud Samantha Macaulay, 52, of San Miguel De Abona, Tenerife, 18 months' imprisonment suspended for 18 months after being found guilty of fraud by false representation. Macaulay was found not guilty of conspiracy to defraud Simon Walker, 58, of Costa Adeje in Tenerife, was sentenced to four-and-a-half years' imprisonment after being found guilty of conspiracy to defraud Joanne Physick, 46, of Los Christianos Arona, Tenerife, two-and-a-half years' imprisonment after being found guilty of conspiracy to defraud David Taylor, 65, of East Yorkshire, three years' imprisonment after being found guilty of conspiracy to defraud Joanne Taylor, 53, of East Yorkshire,12 months' imprisonment, suspended for two years, after pleading guilty to fraud by false representation Lee Evans, 51, of Preston, two years' imprisonment, suspended for two years, after pleading guilty to fraud by false representation Barrie Fox, 69, of Worcester, 21 months' imprisonment, suspended for two years, after pleading guilty to fraud by false representation Josephine Cuthill-Fox, 60, of Worcester, 24 months' imprisonment, suspended for two years, after pleading guilty to fraud by false representation Get in touch Do you have a story BBC Hampshire & Isle of Wight should cover? Contact form You can follow BBC Hampshire & Isle of Wight Facebook external , or Instagram Related topics Stratford-upon-Avon Bournemouth Hampshire & Isle of Wight Fraud Mitcham More on this story The unwanted holiday homes owners can't give away 5 February 2018 Hampshire couple at heart of \u00c2\u00a328m timeshare fraud Attribution Sounds Secret filming reveals timeshare woes 24 October 2016 Fergus Muirhead explains why timeshares became so attractive to British holidaymakers Rip Off Britain - Timeshare Nightmare iPlayer Related internet links HM Courts and Tribunals Service"
+      }
+    }
+  }
+]

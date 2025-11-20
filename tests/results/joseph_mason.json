@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Person Convicted of Bank Fraud",
+    "input": {
+      "edge_case_type": "Full name match",
+      "title": "Person Convicted of Bank Fraud",
+      "summary": "Joseph Mason, 47, was convicted on nine counts of bank fraud totalling over \u00a325,000. He appeared at Wolverhampton Magistrates' Court and received a custodial sentence.",
+      "subject_names": [
+        "Joseph Mason"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/articles/cdeg8enengxo"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.95,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article clearly matches the subject Joseph Mason with a high confidence due to an exact name match and consistent age details. The media is adverse as it reports guilty pleas to multiple fraud offenses, confirming significant risk. Therefore, the case is classified as high risk and requires escalation.",
+      "audit_notes": "- NameMatchResult: Exact name match, age/location consistent, high confidence (0.9).\n- DobAgeMatchResult: No DOB but age matches, no inconsistency, full confidence (1.0).\n- SentimentResult: Adverse media with confirmed fraud and guilty plea, negative sentiment.",
+      "details": {
+        "metadata": {
+          "title": "Joseph Mason pleads guilty to multiple bank frauds",
+          "published_date": "2025-11-17",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article states 'Published 17 November 2025' and details a crime involving Joseph Mason pleading guilty to fraud at a UK court. The URL is from bbc.co.uk and the content clearly fits the Crime section. The date of publication is recent enough for AML purposes."
+        },
+        "people": {
+          "main_person": "Joseph Mason",
+          "other_people": [],
+          "author_names": [],
+          "reasoning": "The article focuses on Joseph Mason, who pleaded guilty to nine counts of fraud at multiple bank branches across the UK. The article details his charges, guilty plea, and upcoming sentencing. No other individuals are mentioned in a way that indicates they are a primary subject, nor is an author byline provided."
+        },
+        "context": {
+          "locations": [
+            "Wolverhampton",
+            "Birmingham",
+            "Stoke",
+            "Oxford",
+            "Liverpool"
+          ],
+          "organisations": [
+            "Wolverhampton Magistrates' Court",
+            "nine bank branches"
+          ],
+          "roles_or_occupations": [
+            "fraudster"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article clearly identifies Joseph Mason as being from Wolverhampton and involved in fraud cases across several UK cities including Birmingham, Stoke, Oxford, and Liverpool. It references his court case at Wolverhampton Magistrates' Court and charges related to fraud at multiple bank branches. The details align well with the subject's name Joseph Mason, supporting consistency with the provided subject."
+        },
+        "name_match": {
+          "subject_name_normalized": "joseph mason",
+          "article_primary_names": [
+            "Joseph Mason"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.9,
+          "reasoning": "The article's main subject is Joseph Mason, described as a 47-year-old man from Wolverhampton who pleaded guilty to nine counts of fraud. The subject name is an exact match. Although no date of birth is provided for the subject, the article provides an age and location consistent with a single individual named Joseph Mason. There are no conflicting details regarding identity."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 47,
+          "age_phrase": "aged 47",
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article states 'Joseph Mason, aged 47'. No DOB is provided for confirmation, so consistency cannot be verified."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud"
+          ],
+          "key_positives": [],
+          "key_negatives": [
+            "Joseph Mason pleaded guilty to nine counts of fraud",
+            "Frauds at bank branches across the UK totalling more than \u00a325,000",
+            "He pled guilty to all offences"
+          ],
+          "reasoning": "The article states that Joseph Mason pleaded guilty to nine counts of fraud involving more than \u00a325,000 taken from multiple bank branches, confirming wrongdoing and adverse media relevance."
+        },
+        "article_text": "Image source, Image caption, Joseph Mason pleaded guilty to nine counts of fraud at Wolverhampton Magistrates' Court Published 17 November 2025 A man has been convicted after a series of frauds at bank branches across the UK, totalling more than \u00c2\u00a325,000. Joseph Mason, aged 47 from Boundary Way in Wolverhampton, was charged with nine counts of fraud and appeared at Wolverhampton Magistrates' Court on Friday. He pled guilty to all offences and will be sentenced on 12 December. It comes after about \u00c2\u00a325,000 was fraudulently taken from nine bank branches, in locations including Birmingham, Stoke, Oxford and Liverpool, between 5 February and 9 April this year. Get in touch Tell us which stories we should cover in Wolverhampton Contact form Follow BBC Wolverhampton & Black Country on BBC Sounds Facebook external and Instagram Related topics Wolverhampton Fraud Related internet links HM Courts & Tribunals Service"
+      }
+    }
+  }
+]

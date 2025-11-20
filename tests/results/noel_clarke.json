@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Celebrity Claims Damaging Allegations Were False",
+    "input": {
+      "edge_case_type": "False allegation",
+      "title": "Celebrity Claims Damaging Allegations Were False",
+      "summary": "Noel Clarke claims he faced life-altering financial losses after the Guardian published misconduct allegations, which he contests are false and defamatory.",
+      "subject_names": [
+        "Noel Clarke"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/entertainment-arts-66122841"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.95,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article clearly concerns Noel Clarke, with a high confidence name match despite no DOB/age data. It reports credible and multiple misconduct allegations resulting in professional sanctions and legal actions, indicating significant adverse media. Given the clear subject match and adverse content, this is a high-risk case requiring escalation.",
+      "audit_notes": "- NameMatchResult: strong name match with 0.95 confidence; no conflicting identity details\n- DobAgeMatchResult: no DOB/age info in article; confidence 1.0 but neutral impact\n- SentimentResult: mixed overall sentiment but with credible adverse allegations and professional consequences; qualifies as adverse media",
+      "details": {
+        "metadata": {
+          "title": "Noel Clarke seeks \u00a310m damages from Guardian over misconduct allegations",
+          "published_date": "2023-07-20",
+          "section": "Entertainment",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article discusses a legal case involving Noel Clarke and Guardian articles first published in 2021. It references a High Court hearing originally scheduled for 20 July 2023, later rescheduled to October/November 2023, indicating recent developments. The source URL is from bbc.co.uk and the content relates to entertainment news."
+        },
+        "people": {
+          "main_person": "Noel Clarke",
+          "other_people": [
+            "Mrs Justice Steyn",
+            "Mr Justice Murray"
+          ],
+          "author_names": [
+            "Lizo Mzimba"
+          ],
+          "reasoning": "The article centers on Noel Clarke's defamation claim against the Guardian concerning allegations made by 20 women, detailing financial damages he claims and legal proceedings. Other individuals mentioned are judges involved in the case, and Lizo Mzimba is credited as the BBC Entertainment correspondent authoring the article."
+        },
+        "context": {
+          "locations": [
+            "London"
+          ],
+          "organisations": [
+            "The Guardian",
+            "Sky TV",
+            "ITV",
+            "Channel 5",
+            "BBC",
+            "StudioCanal",
+            "Unstoppable Productions",
+            "Bafta",
+            "Metropolitan Police"
+          ],
+          "roles_or_occupations": [
+            "actor",
+            "producer",
+            "writer",
+            "director"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article is primarily about Noel Clarke, referencing his roles as an actor, producer, writer, and director. It mentions organisations directly connected to him such as production companies and broadcasters of his work (Sky TV, ITV, Channel 5, BBC, StudioCanal) and the Guardian, the defendant in his defamation claim. The location London is mentioned in the context of the High Court where his legal case is proceeding. The context clearly aligns with the subject named Noel Clarke."
+        },
+        "name_match": {
+          "subject_name_normalized": "noel clarke",
+          "article_primary_names": [
+            "Noel Clarke"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The main individual the article is about is Noel Clarke, as indicated multiple times in the core narrative, e.g., 'Noel Clarke is seeking approximately \u00a310m damages from the Guardian' and 'The actor and producer, who denies the allegations, says the articles have had a \"catastrophic\" effect on his career.' The article discusses allegations against and legal actions taken by Noel Clarke, confirming he is the article's primary subject. Given the exact name match and context focusing entirely on this individual, it is a strong potential match to the subject Noel Clarke. No conflicting details about identity (gender, profession, timeframe) are present."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": null,
+          "age_phrase": null,
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article contains no explicit mention of Noel Clarke's age or date of birth."
+        },
+        "sentiment": {
+          "overall_sentiment": "mixed",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "credible allegations"
+          ],
+          "key_positives": [
+            "Noel Clarke denies all allegations",
+            "He is actively pursuing a substantial damages claim against the Guardian"
+          ],
+          "key_negatives": [
+            "20 women have made misconduct allegations over a 15-year period",
+            "Bafta suspended his membership and an award due to harassment claims",
+            "The Guardian published multiple detailed articles based on interviews with 20 women",
+            "Metropolitan Police decided there was not enough evidence for a criminal investigation"
+          ],
+          "reasoning": "The article reports serious misconduct allegations from numerous women and resulting professional consequences (Bafta suspension), representing credible adverse media. However, Clarke denies the allegations and is suing the Guardian for defamation claiming devastating financial impact, highlighting ongoing legal dispute and lack of criminal charges. This creates a mixed portrayal with adverse relevance due to the credible allegations and professional sanctions mentioned."
+        },
+        "article_text": "Image source, PA Media Image caption, Noel Clarke has appeared in films including Kidulthood and TV Shows like Doctor Who Lizo Mzimba Entertainment correspondent, BBC News Noel Clarke is seeking approximately \u00c2\u00a310m damages from the Guardian over articles about his alleged behaviour towards several women, according to court documents seen by BBC News. In the eight articles, 20 women who worked with Mr Clarke over a 15-year period made misconduct allegations. The actor and producer, who denies the allegations, says the articles have had a \"catastrophic\" effect on his career. Should he win his case, a judge will decide what damages he is entitled to. Damages claim According to documents lodged at London's High Court as part of a defamation claim against the Guardian, as well as claiming for general damages which cover harm to reputation, Mr Clarke is seeking special damages which cover specific financial losses. Mr Clarke's claim says \"the impact on him financially has been devastating\". The claim adds that as well as \"every existing or upcoming contract\" being cancelled, Mr Clarke has \"not had one single work contract\" since the first Guardian article about him was published in April 2021. Specific financial losses claimed by Noel Clarke Sky TV show Bulletproof, series 4 His fee for acting in 10 episodes - \u00c2\u00a3585,000 His fee for writing two episodes - \u00c2\u00a390,000 His fee for directing two episodes - \u00c2\u00a390,000 Anticipated royalties - \u00c2\u00a3250,000 (estimated figure) ITV TV show Viewpoint, series 2 His fee - \u00c2\u00a3270,000 Anticipated royalties - \u00c2\u00a3200,000 (estimated figure) Channel 5 TV show Highwater (a greenlit show which he says would probably have begun shooting in winter 2021) His producer bonus - in the region of \u00c2\u00a360,000 BBC TV show Crongton (a greenlit show which he says was likely to be shot around late summer 2022) StudioCanal movie Something in the Water His producer bonus - in the region of \u00c2\u00a340,000 Former production company Unstoppable Minimum salary over 10 years - \u00c2\u00a31.25m (not including any potential raises or bonuses) Projected approximate value of shares, which he says has now been \"wiped out\", over next three years - \u00c2\u00a37m Legal fees on dealing with Guardian allegations when first published, involving two law firms Approximately \u00c2\u00a3245,000 The total approximate figure, excluding VAT, comes to \u00c2\u00a310,140,000.60 Mr Clarke is also claiming aggravated damages, for what his lawyers describe as the \"relentless, targeted, vicious and persistent nature of the wholly unjustified defamatory campaign\" launched against him by the Guardian. Next legal steps The next significant stage due in the case is a hearing at the High Court to determine the exact meaning of the articles, whether they are defamatory and whether they are statements of fact or opinion. This was scheduled to take place this week on Thursday 20 July. But the court has been told that Mr Clarke wishes to instruct new solicitors. High Court judge Mrs Justice Steyn has now made an order that in order to give Mr Clarke the time to do this, the hearing has been rescheduled to take place in October or early November 2023. Noel Clarke's defamation case is due to be heard at London's High Court The Guardian does not yet appear to have filed an official defence with the court, but Mr Clarke's legal team assert in court papers that \"it appears from the pre-action correspondence\" that the Guardian appears \"to be intent on robustly defending\" the case. According to an order made in May by Mr Justice Murray, the Guardian is not required to submit its defence to the court before the result of the autumn hearing is known. Guardian News & Media has said in a statement: \"The Guardian's investigation was deeply reported and researched, relying on the testimony of 20 women, all of whom knew Noel Clarke in a professional capacity. We stand by our reporting and will be robustly defending our journalism.\" The legal papers in the case have only recently been obtained by BBC News. The majority should have been made publicly available more than six months ago. The BBC has been told that that the relevant Government department is investigating to see what went wrong, and is improving processes to ensure it doesn't happen again. The allegations against Mr Clarke were first published by the Guardian in 2021. As a result, Bafta suspended his membership as well as the Outstanding British Contribution to Cinema award that he had been presented with days earlier. The Metropolitan Police said in March 2022 there was not enough evidence against him to warrant a criminal investigation. Sign up for our morning newsletter and get BBC News in your inbox. Related topics Noel Clarke More on this story Bafta suspends Noel Clarke over harassment claims Published 30 April 2021 No investigation for Noel Clarke harassment claims 28 March 2022 Actor Noel Clarke drops legal action against Bafta 7 September 2022"
+      }
+    }
+  }
+]

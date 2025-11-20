@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Jane Smith Interviews Jonathan Carter",
+    "input": {
+      "title": "Jane Smith Interviews Jonathan Carter",
+      "summary": "Interview covers market trends. Jonathan Carter is only mentioned in a brief quote; Jane Smith is the author.",
+      "subject_names": [
+        "Jane Smith",
+        "Jonathan Carter"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "contains_age_phrase": false,
+      "sentiment": "neutral",
+      "adverse_media_classification": "none",
+      "edge_case_reason": "Author name in byline, quoted speech.",
+      "article_link": "https://www.abc.net.au/news/2023-12-17/pensioner-jonn-carter-taken-advantage-of-by-charities/103197048"
+    },
+    "output": {
+      "is_subject_match": false,
+      "match_confidence": 1.0,
+      "overall_risk_label": "no_match",
+      "decision": "discard_as_not_relevant",
+      "human_readable_summary": "The article focuses on John Carter, not Jane Smith, with a definitive mismatch in identity. The piece describes John Carter as a victim of exploitation, not a subject of adverse allegations. Therefore, this is not relevant for screening Jane Smith.",
+      "audit_notes": "- NameMatchResult: definitive no match; subject is John Carter, not Jane Smith.\n- DobAgeMatchResult: age info corresponds to John Carter, no data on Jane Smith.\n- SentimentResult: article is neutral and non-adverse, focusing on victimization rather than misconduct.",
+      "details": {
+        "metadata": {
+          "title": "Pensioner Exploited by Charities Through Telemarketing Fundraisers",
+          "published_date": "2023-12-16",
+          "section": "Community and Society",
+          "source_domain": "abc.net.au",
+          "is_recent": true,
+          "reasoning": "The article's date is clearly stated as Saturday 16 December 2023 near the top, under the topic 'Community and Society'. The URL's domain is abc.net.au. The content is about charity fundraising exploitation, fitting Community and Society. The date is recent relative to screening date."
+        },
+        "people": {
+          "main_person": "John Carter",
+          "other_people": [
+            "Gary Van der Linde",
+            "Ruth Van der Linde",
+            "Janice Rokesky",
+            "Corey Irlam",
+            "Katherine Raskob",
+            "Jemima Burt",
+            "Tyrone Dalton",
+            "Barrie Pullen",
+            "Andrew Whitington"
+          ],
+          "author_names": [
+            "Jemima Burt"
+          ],
+          "reasoning": "The article centers on John Carter, a 73-year-old pensioner with cerebral palsy whose generosity was exploited by telemarketers. The entire narrative focuses on his experience with charities and the financial impact. Other individuals mentioned are family members, officials, or journalists, not the primary subject."
+        },
+        "context": {
+          "locations": [
+            "Bendigo, Victoria",
+            "Lilydale"
+          ],
+          "organisations": [],
+          "roles_or_occupations": [
+            "pensioner",
+            "former disability pensioner"
+          ],
+          "subject_context_consistent": false,
+          "confidence": 0.9,
+          "reasoning": "The article is about John Carter, a pensioner in Bendigo, Victoria, targeted by charities. The subject is Jane Smith, and no information links her to the article's main person or context. Therefore, the context is inconsistent with the subject."
+        },
+        "name_match": {
+          "subject_name_normalized": "jane smith",
+          "article_primary_names": [
+            "john carter"
+          ],
+          "is_name_potential_match": false,
+          "confidence": 1.0,
+          "reasoning": "The main individual in the article is John Carter, named multiple times in the core narrative: \"John Carter nearly drained his savings...\", \"John Carter has cerebral palsy...\", \"Mr Carter's nephew Gary Van der Linde...\", clearly indicating John Carter is the primary subject. The subject name is Jane Smith, which does not match John Carter either by surname or given name. No contextual or identifying information links Jane Smith to John Carter. Therefore, there is a definitive mismatch."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 73,
+          "age_phrase": "The 73-year-old",
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article explicitly states 'The 73-year-old' referring to John Carter, not Jane Smith, and no birth or age information about Jane Smith is presented."
+        },
+        "sentiment": {
+          "overall_sentiment": "neutral",
+          "is_adverse_media": false,
+          "adverse_categories": [],
+          "key_positives": [
+            "John Carter is described as an extremely generous man who gives his time and money to his local church."
+          ],
+          "key_negatives": [
+            "John Carter was exploited by telemarketers for charities, resulting in over $18,000 given over six years, causing significant financial strain."
+          ],
+          "reasoning": "The article portrays John Carter as a generous but vulnerable individual targeted by aggressive charity telemarketers. There are no allegations, investigations, or evidence of wrongdoing by John Carter himself; rather, he is a victim of exploitation. The article focuses on the challenges and financial impact on him, with no adverse media related to criminal or financial misconduct by him."
+        },
+        "article_text": "John Carter nearly drained his savings giving to charity \u2014 his family say those who targeted him need to be put on notice By Jemima Burt Topic: Community and Society Sat 16 Dec 2023 Saturday 16 December 2023 Sat 16 Dec 2023 at 9:08pm John Carter has cerebral palsy and was targeted by telemarketers fundraising for charity. ABC News: Tyrone Dalton When pensioner John Carter was moving into care earlier this year, his family was sorting through his belongings and made an alarming discovery. His family describe him as an extremely generous man, who gives his time and money to his local church. The 73-year-old, who lives with cerebral palsy, had been living independently in Bendigo, Victoria on the disability pension before qualifying for the age pension. But a box of bank statements revealed his generosity had been exploited. Over six years he had made more than 800 direct debits to Australian charities, totalling more than $18,000. By 2023, he was giving over $500 each month across more than 20 charities, which accounted for nearly a quarter of his monthly income. As a pensioner, there was no opportunity for Mr Carter to claim the donations back through tax. 'They still wouldn't take no for an answer' Mr Carter said \"pushy\" tele-fundraisers had signed him up for all but one of the payments. \"I did tell them that I was on a pension, they still wouldn't take no for an answer,\" he said. \"They made it sound like they were so important, so urgent, we desperately need your support.\" The financial strain to keep up with the donations forced the pensioner to draw down on his savings. \"I knew my limits. [My savings] dropped by probably half, more than half,\" he said. John Carter\u2019s nephew Gary Van der Linde, who lives nearly 200km away, helped him cancel more than 20 direct debits each month. ABC News: Barrie Pullen I would have had no money eventually, I would have been bankrupt. Statements across two years reveal he paid more than $18,000 to 22 charities between 2018 and 2023. One charity was collecting two direct debits per month. Mr Carter's nephew Gary Van Der Linde, who lives 200 kilometres away in Lilydale, said it has seriously affected the former disability pensioner's finances. \"His savings have gone down very substantially. In the future for when he needs high care, he doesn't have the money,\" he said. Call centres 'need to be put on notice' John Carter's family said his story needed to be a warning to charities and professional fundraisers repeatedly targeting vulnerable individuals. \"These call centres need to be put on notice,\" Gary Van der Linde said. \"The lady in the bank, she said she's seeing it more and more. The elderly come in and they don't know how to cancel them.\" Calling donors is one of the most effective fundraising methods for Australian charities, and the professional fundraising industry is increasing its efficiency with artificial intelligence. Council On The Ageing (COTA) acting CEO Corey Irlam said the increased use of AI meant tele-fundraisers were able to contact donors more frequently. \"The cost of doing so is lower,\" he said. \"They're able to use AI to say 'Yes, this person is interested' then hand them over to a [real] person. \"This is seeing a larger number of donation calls going to the homes of everyday Australians than what we saw three or four years ago.\" He said the frequency of calls could make it harder for older and vulnerable Australians to say no. \"All too often we see businesses and professional fundraisers taking advantage of older people,\" Mr Irlam said. Corey Irlam said tele-fundraisers are using AI to increase frequency of calls, making it harder for vulnerable people to say no. ABC News: Andrew Whitington \"The thing about professional fundraisers is they often work on a commission, and unfortunately, that means that they're susceptible to pressure tactics or frequency of phone calls to wear the donor down. \"That's something that we think the industry fundraising code tries to address, but [it] doesn't always work [in] every situation.\" A self-regulated industry In 2022, the Australian Red Cross engaged professional fundraising firm Dataro which used AI technology to increase donations from standard-level donors. The company said the technology worked out how likely each donor would be to give between $500 and $5,000 a year if \"stewarded effectively\", and increased donations by $505,000 for its 2022 campaign. The professional fundraising industry is self-regulated, and fundraising companies and charities are meant to adhere to the Fundraising Institute of Australia code. John Carter and his niece Ruth Van der Linde and sister Janice Rokesky, who helped him cancel his donations. In a statement, Fundraising Institute of Australia CEO Katherine Raskob said the institute and its members took vulnerability very seriously, and would always work with the donor and their family to understand what happened and refund any donations made. Some of the well-known charities named in Mr Carter's bank statements used now collapsed Brisbane tele-fundraising company Pareto Phone, which is under investigation by the FIA Code Authority. The Brisbane company collected donations on behalf of dozens of well-known Australian charities over the phone for more than to two decades. It folded in October, two months after the ABC revealed it was the subject of a major cyber-attack which saw tens of thousands of donor details and highly sensitive employee records published on the dark web. The company is under investigation by Australia's privacy regulator for alleged breaches of privacy law, and its owner Merchant Place Investments potentially faced a fine of up to $50 million. It's alleged to have retained donor data for years beyond when it was required. Employees of the collapsed company have told the ABC many charities had called phone numbers so old that the donors had died years earlier."
+      }
+    }
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "title": "Crypto Fraudster Known as 'The Goddess of Wealth'",
+    "input": {
+      "edge_case_type": "Nickname/alias identity",
+      "title": "Crypto Fraudster Known as 'The Goddess of Wealth'",
+      "summary": "Chinese national Qian Zhimin, known as 'the goddess of wealth', was convicted of money laundering after UK police seized over \u00a35bn in crypto.",
+      "subject_names": [
+        "Qian Zhimin",
+        "the goddess of wealth"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/articles/cy0415kk3rzo"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.925,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article strongly matches the screening subject Qian Zhimin with high confidence based on name and age references. The content is clearly adverse, detailing criminal charges related to large-scale fraud and money laundering. Given the direct adverse linkage to the subject, high risk escalation is warranted.",
+      "audit_notes": "- NameMatchResult: strong name match with 0.95 confidence, subject is main article focus.\n- DobAgeMatchResult: age mentioned as 47, consistent with subject, confidence 0.9.\n- SentimentResult: adverse media confirmed due to fraud and criminal charges, supporting high risk.",
+      "details": {
+        "metadata": {
+          "title": "Qian Zhimin convicted in largest cryptocurrency seizure fraud case",
+          "published_date": "2025-09-30",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article text includes a clear publication date: 'Published 30 September 2025'. The content is focused on crime and fraud relating to cryptocurrency, indicating the section is Crime. The URL is from bbc.co.uk. The event is recent as of 2025."
+        },
+        "people": {
+          "main_person": "Qian Zhimin",
+          "other_people": [
+            "Seng Hok Ling",
+            "Jian Wen",
+            "Isabella Grotto",
+            "Roger Sahota",
+            "Robin Weyell",
+            "Will Lyne",
+            "Dan Jarvis"
+          ],
+          "author_names": [
+            "Osmond Chia",
+            "Liv McMahon",
+            "Tony Han"
+          ],
+          "reasoning": "The article primarily focuses on Qian Zhimin, also known as Yadi Zhang, who was convicted for illegal possession and acquisition of a massive amount of cryptocurrency linked to a large-scale scam. The article details Qian's criminal activities, investigation, arrest, and upcoming sentencing, making her the main subject. Other individuals like Seng Hok Ling and Jian Wen are mentioned as accomplices, while Isabella Grotto and others are officials or commentators. Authors Osmond Chia, Liv McMahon, and Tony Han are identified in the bylines and reporting credits."
+        },
+        "context": {
+          "locations": [
+            "China",
+            "United Kingdom",
+            "Singapore",
+            "Derbyshire",
+            "North London",
+            "Dubai"
+          ],
+          "organisations": [
+            "Metropolitan Police",
+            "Southwark Crown Court",
+            "Berkeley Square Solicitors",
+            "Crown Prosecution Service"
+          ],
+          "roles_or_occupations": [
+            "Chinese national",
+            "fraudster",
+            "criminal scheme leader"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article clearly identifies Qian Zhimin as a Chinese national involved in a large-scale fraud scheme based in China and later arrested in the UK. She was prosecuted at Southwark Crown Court in London and investigated by the Metropolitan Police. These details match the subject's name and imply roles related to fraud and criminality, consistent with the subject's identity."
+        },
+        "name_match": {
+          "subject_name_normalized": "qian zhimin",
+          "article_primary_names": [
+            "Qian Zhimin",
+            "Yadi Zhang"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The article's main subject is Qian Zhimin, also known as Yadi Zhang, described consistently as a Chinese national involved in a major cryptocurrency fraud. The text states: 'Qian Zhimin, also known as Yadi Zhang, pleaded guilty...' and details a criminal investigation and conviction directly linked to this name. This matches the screening subject's full name exactly. There are no conflicting personal details such as gender, location, or occupation noted that contradict this. Therefore, it is a strong potential match."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 47,
+          "age_phrase": "the 47-year-old's guilty plea",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article states 'the 47-year-old's guilty plea' referring to Qian Zhimin's age, but there is no subject DOB provided to check consistency."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "money laundering",
+            "criminal charges",
+            "financial crime"
+          ],
+          "key_positives": [
+            "Qian's guilty plea may bring some comfort to investors expecting compensation",
+            "Significant rise in cryptocurrency values means funds available to repay losses"
+          ],
+          "key_negatives": [
+            "Qian led a large-scale scam cheating 128,000 victims",
+            "Convicted for illegally acquiring and possessing cryptocurrency",
+            "Involved in a global money laundering web",
+            "Fled China using false documents",
+            "Attempted to launder stolen money by buying property"
+          ],
+          "reasoning": "The article states Qian Zhimin was convicted after a 'large-scale scam' cheating over 128,000 victims and pleaded guilty to illegally acquiring and possessing cryptocurrency. She was involved in a global money laundering investigation and fled China using false documents, confirming criminal charges and financial crime. These details justify the adverse media classification and negative sentiment."
+        },
+        "article_text": "Image source, Metropolitan Police Image caption, Qian Zhimin, also known as Yadi Zhang, was convicted on Monday Osmond Chia Business reporter Reporting from Singapore and Liv McMahon Technology reporter Published 30 September 2025 A Chinese national has been convicted following an international fraud investigation which resulted in what's believed to be the single largest cryptocurrency seizure in the world. The Metropolitan Police says it recovered 61,000 bitcoin worth more than \u00c2\u00a35bn ($6.7bn) in current prices. Qian Zhimin, also known as Yadi Zhang, pleaded guilty on Monday at Southwark Crown Court of illegally acquiring and possessing the cryptocurrency. A second person appeared in court on Tuesday to admit to their role in the scheme. Malaysian national Seng Hok Ling, of Matlock, Derbyshire, pleaded guilty at Southwark Crown Court of entering into a money laundering arrangement on or before 23 April 2024. According to the charge, he had been dealing in cryptocurrency on Qian's behalf, \"knowing or suspecting his actions would facilitate the acquisition or control of criminal property by another\". Between 2014 and 2017 Qian led a large-scale scam in China which involved cheating more than 128,000 victims and storing the stolen funds in bitcoin assets, the Met said in a statement external It said the 47-year-old's guilty plea followed a seven-year probe into a global money laundering web which began when it got a tipoff about the transfer of criminal assets. Qian had been \"evading justice\" for five years up to her arrest, which required a complex investigation involving multiple jurisdictions, said Detective Sergeant Isabella Grotto, who led the Met's investigation. She fled China using false documents and entered the UK, where she attempted to launder the stolen money by buying property, said the Met. \"By pleading guilty today, Ms Zhang hopes to bring some comfort to investors who have waited since 2017 for compensation, and to reassure them that the significant rise in cryptocurrency values means there are more than sufficient funds available to repay their losses,\" said Qian's solicitor Roger Sahota, of Berkeley Square Solicitors. On Tuesday, the Court heard that confiscation proceedings had begun in an effort to retrieve more than \u00c2\u00a316.2 million from Ling, with the figure to be adjusted to reflect cryptocurrency rates when he is sentenced in November. Some reports have suggested the UK government will seek to retain the seized funds. The BBC has approached the Treasury and the Home Office for a response. Reforms to crime legislation under the previous Conservative government aimed to make it easier for the UK authorities to seize, freeze and recover crypto assets The changes would also allow some victims to apply for the release of their assets held in accounts. 'The goddess of wealth' Qian had help from a Chinese takeaway worker named Jian Wen, who was jailed for six years and eight months last year for her part in the criminal operation. Wen, 44, laundered the proceeds from the scam and moved from living above a restaurant to a \"multi-million pound rented house\" in north London, said the Crown Prosecution Service (CPS) earlier this year. She also bought two properties in Dubai worth more than \u00c2\u00a3500,000, the CPS said. The Met said it seized more than \u00c2\u00a3300m worth of bitcoin from Wen. Crown Prosecution Service The North London property Jian Wen moved into in 2017 Chinese media outlet Lifeweek reported in 2024 that investors, mostly between 50 and 75 years old, had poured \"hundreds of thousands to tens of millions\" of yuan into investments promoted by Qian. Some of the victims - including business people, bank employees and members of the judiciary - were reportedly urged to invest with Qian's scheme by friends and family. The investors reportedly knew little about Qian, who was described as \"the goddess of wealth\". \"Bitcoin and other cryptocurrencies are increasingly being used by organised criminals to disguise and transfer assets, so that fraudsters may enjoy the benefits of their criminal conduct,\" said deputy chief Crown prosecutor, Robin Weyell. \"This case, involving the largest cryptocurrency seizure in the UK, illustrates the scale of criminal proceeds available to those fraudsters.\" Monday's conviction marks the \"culmination of years of dedicated investigation\", which has involved the police and Chinese law enforcement teams, said Will Lyne, the Met's Head of Economic and Cybercrime Command. Qian is being held in custody ahead of sentencing, which will take place on 10 November - as part of a two-day sentencing hearing at which Seng Hok Ling has also been asked to appear. UK Security Minister Dan Jarvis said the conviction sent a \"clear signal\" that UK wasn't a \"safe haven\" for criminals. \"Money laundering erodes trust, undermines our economy, and fuels the rise of serious organised crime,\" he said in a statement. The BBC has contacted the Chinese embassy in the UK for comment. Additional reporting by Tony Han, Journalist, BBC Global China Unit. Get our flagship newsletter with all the headlines you need to start the day. Sign up here. Related topics Cyber-crime Crime Fraud Cryptocurrency More on this story From Bitcoin to XRP: Key cryptocurrency terms and what they mean 14 July South Korea 'cryptocrash king' Do Kwon jailed 20 June 2023"
+      }
+    }
+  }
+]

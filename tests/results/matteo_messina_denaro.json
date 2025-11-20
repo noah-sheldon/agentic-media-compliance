@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Mafia Boss Dies in Prison",
+    "input": {
+      "edge_case_type": "Historic crime, deceased subject",
+      "title": "Mafia Boss Dies in Prison",
+      "summary": "Matteo Messina Denaro, the infamous Cosa Nostra boss convicted of murders in the 1990s, died in jail. Coverage notes both his crimes and passing.",
+      "subject_names": [
+        "Matteo Messina Denaro"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/world-europe-66909616"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 1.0,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article matches the subject Matteo Messina Denaro with high confidence. The subject is clearly identified as the main person discussed, aged 61 as referenced, fitting known details. The article is strongly adverse, detailing serious criminal activities and convictions, thus warranting high-risk escalation.",
+      "audit_notes": "- NameMatchResult: exact name match with full subject focus, confidence 1.0\n- DobAgeMatchResult: age 61 consistent, confidence 1.0, no DOB conflicts\n- SentimentResult: adverse media identified with multiple serious crimes and confirmed convictions, confirming high-risk",
+      "details": {
+        "metadata": {
+          "title": "Italian Mafia Boss Matteo Messina Denaro Dies After Arrest",
+          "published_date": "2023-09-22",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article contains a clear publication date 'Published 22 January 2023' and mentions Denaro's death occurring recently, including his coma on a Friday before the report. The article content focuses on crime and mafia-related activities. Source domain is extracted from the URL 'bbc.co.uk'. Date September 22, 2023 is mentioned near the top, aligning with the likely death date and article date, making it recent for AML."
+        },
+        "people": {
+          "main_person": "Matteo Messina Denaro",
+          "other_people": [
+            "Tot\u00f2 Riina",
+            "Giovanni Falcone",
+            "Paolo Borsellino",
+            "Pierluigi Biondi",
+            "Patrizia Messina Denaro"
+          ],
+          "author_names": [
+            "Kathryn Armstrong"
+          ],
+          "reasoning": "The article primarily focuses on Matteo Messina Denaro, describing his role as a Mafia boss, his criminal activities, long fugitive status, capture, illness, and death. Other individuals mentioned are related persons such as his mentor Tot\u00f2 Riina, victims Giovanni Falcone and Paolo Borsellino, a mayor Pierluigi Biondi who confirmed his death, and his sister Patrizia who was arrested. The author name Kathryn Armstrong is given in the byline."
+        },
+        "context": {
+          "locations": [
+            "Italy",
+            "L'Aquila",
+            "Sicily",
+            "Palermo"
+          ],
+          "organisations": [
+            "Cosa Nostra"
+          ],
+          "roles_or_occupations": [
+            "Mafia boss",
+            "head of the Corleone clan",
+            "criminal boss",
+            "fugitive"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article specifically discusses Matteo Messina Denaro as an Italian Mafia boss and key figure of the Cosa Nostra, mentioning locations in Italy such as L'Aquila (hospital), Palermo (arrest location), and Sicily broadly. His roles are consistently described as Mafia boss and criminal leader, confirming alignment with the subject's identity as the notorious Mafia boss."
+        },
+        "name_match": {
+          "subject_name_normalized": "matteo messina denaro",
+          "article_primary_names": [
+            "Matteo Messina Denaro"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 1.0,
+          "reasoning": "The article's main subject is 'Italian Mafia boss Matteo Messina Denaro' who is described as one of the country's most wanted men until his capture earlier this year. Significant snippets include 'Matteo Messina Denaro, who was one of the country's most wanted men until his capture earlier this year, has died,' and 'More than 100 members of the armed forces were involved in his arrest in January.' There are no conflicting details; the name matches exactly, and the subject is clearly the main person discussed in the article."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 61,
+          "age_phrase": "The 61-year-old",
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article explicitly states: 'The 61-year-old' referring to Matteo Messina Denaro. No DOB is provided for comparison."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "organized crime",
+            "murder",
+            "racketeering",
+            "money laundering",
+            "drug trafficking"
+          ],
+          "key_positives": [
+            "Successful arrest after 30 years on the run",
+            "Inability to evade justice highlights law enforcement effectiveness"
+          ],
+          "key_negatives": [
+            "Responsible for numerous murders including anti-Mafia prosecutors",
+            "Sentenced to life in jail in absentia in 2002",
+            "Oversaw racketeering, illegal waste dumping, money laundering, drug trafficking",
+            "Symbol of Mafia's power and state's earlier inability to capture him"
+          ],
+          "reasoning": "Described as a Mafia boss responsible for murders, sentenced to life in prison, involved in racketeering, money laundering, and drug trafficking. Article states: 'responsible for numerous murders', 'sentenced to life in jail in absentia', 'oversaw racketeering, illegal waste dumping, money-laundering and drug-trafficking'. These constitute credible, confirmed criminal activities making this adverse media."
+        },
+        "article_text": "Image source, Reuters Image caption, Messina Denaro was thought to be the protege of Tot\u00c3\u00b2 Riina, head of the Corleone clan Kathryn Armstrong BBC News Italian Mafia boss Matteo Messina Denaro, who was one of the country's most wanted men until his capture earlier this year, has died. The 61-year-old was thought to be a boss of the notorious Cosa Nostra Mafia and spent 30 years on the run before he was detained in January. He was being treated for cancer at the time of his arrest and was moved from prison to hospital last month. Denaro was thought to have been responsible for numerous murders. He was tried and sentenced to life in jail in absentia in 2002 for crimes including involvement in the 1992 killing of anti-Mafia prosecutors Giovanni Falcone and Paolo Borsellino and once boasted he could \"fill a cemetery\" with his victims. He also oversaw racketeering, illegal waste dumping, money-laundering and drug-trafficking for the Cosa Nostra organised crime syndicate. Although he had been a fugitive since 1993, Messina Denaro was thought to have still been issuing orders to his subordinates from various secret locations. According to local media, he fell into an irreversible coma on Friday at a hospital in the central Italian city of L'Aquila, after requesting that he be given no aggressive medical treatment. Messina Denaro (R) was arrested by Italy's Carabinieri military police in January He had undergone surgery in recent months for issues to do with his cancer, but had reportedly not recovered following the latest operation. L'Aquila Mayor Pierluigi Biondi confirmed Denaro's death, writing on X (formerly Twitter) that it was \"the epilogue of an existence lived without remorse or regret, a painful chapter in recent history that we cannot erase.\" Alongside his crimes, Denaro was thought to be Cosa Nostra's last \"secret-keeper\". Many informers and prosecutors believe he held all the information and the names of those involved in several of the most high-profile crimes by the Mafia. More than 100 members of the armed forces were involved in his arrest in January, which happened at a private clinic in Sicily's capital, Palermo, where he was receiving chemotherapy. Jewellery and gemstones found in mobster's hideout Culture of Sicilian silence that protected Mafia boss for 30 years For years, he had been a symbol of the state's inability to reach the upper echelons of the organised crime syndicates. Italian investigators often came close to catching Denaro by monitoring those closest to him. This resulted in the arrest of his sister, Patrizia, and several of his associates in 2013. Police also seized valuable businesses linked to him, leaving him increasingly isolated. However, few photos of him existed and police had to rely on digital composites to reconstruct his appearance in the decades after he went on the run. A recording of his voice was not released until 2021. In September 2021, a Formula 1 fan from Liverpool was arrested at gunpoint in a restaurant in the Netherlands after being mistaken for Denaro. Media caption, WATCH: Moment Matteo Messina Denaro is detained in Palermo, Sicily Related topics Mafia Italy More on this story Published 22 January 2023 19 January 2023 Italy's most-wanted Mafia boss arrested in Sicily 16 January 2023"
+      }
+    }
+  }
+]

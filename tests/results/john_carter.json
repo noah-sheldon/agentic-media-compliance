@@ -1,0 +1,290 @@
+[
+  {
+    "title": "Banking CEO Praised for Charity",
+    "input": {
+      "title": "Banking CEO Praised for Charity",
+      "summary": "Pensioner John Carter nearly drained his savings giving to charity; family warns against fundraisers targeting vulnerable individuals.",
+      "subject_names": [
+        "John Carter"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "contains_age_phrase": false,
+      "sentiment": "positive",
+      "adverse_media_classification": "none",
+      "edge_case_reason": "Positive-only coverage, exact name match.",
+      "article_link": "https://www.abc.net.au/news/2023-12-17/pensioner-jonn-carter-taken-advantage-of-by-charities/103197048"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.925,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article clearly concerns John Carter, supported by direct references and a strong name match. The age mention aligns with the subject, reinforcing identity confidence. The article details adverse financial exploitation, including serious depletion of savings caused by aggressive tele-fundraisers. Given the strong match and clear adverse media, escalation is warranted.",
+      "audit_notes": "- NameMatchResult: High confidence (0.95) name match with direct quotes and supporting context.\n- DobAgeMatchResult: Age 73 mentioned, consistent with assumed subject, confidence 0.9.\n- SentimentResult: Article is adverse, describing significant financial exploitation and harm, triggering high risk label and escalation.",
+      "details": {
+        "metadata": {
+          "title": "Pensioner John Carter Exploited by Pushy Charity Telemarketers",
+          "published_date": "2023-12-16",
+          "section": "Community and Society",
+          "source_domain": "abc.net.au",
+          "is_recent": true,
+          "reasoning": "Title and section derived from text snippets: 'John Carter nearly drained his savings giving to charity', 'Topic: Community and Society Sat 16 Dec 2023'. Published date specifically stated as 'Saturday 16 December 2023'. Source domain from URL 'abc.net.au'. Article describes recent events about exploitation of pensioner, thus considered recent."
+        },
+        "people": {
+          "main_person": "John Carter",
+          "other_people": [
+            "Gary Van der Linde",
+            "Corey Irlam",
+            "Ruth Van der Linde",
+            "Janice Rokesky",
+            "Katherine Raskob"
+          ],
+          "author_names": [
+            "Jemima Burt"
+          ],
+          "reasoning": "The article primarily focuses on John Carter, a pensioner with cerebral palsy who was exploited by telemarketing charities that caused significant financial strain on him. The article details his experience and the impact on his finances, making him the central subject. Other names mentioned include his family members who helped him, and industry representatives commenting on the issue. Jemima Burt is identified as the author of the article."
+        },
+        "context": {
+          "locations": [
+            "Bendigo, Victoria",
+            "Lilydale"
+          ],
+          "organisations": [
+            "local church"
+          ],
+          "roles_or_occupations": [
+            "pensioner",
+            "former disability pensioner"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article centers clearly on John Carter, described as a 73-year-old pensioner living with cerebral palsy in Bendigo, Victoria. It references his direct giving to multiple Australian charities and his membership at a local church. The roles of pensioner and former disability pensioner are directly stated. These details are consistent with the subject 'John Carter' and provide a clear and specific personal and locational context related to him."
+        },
+        "name_match": {
+          "subject_name_normalized": "john carter",
+          "article_primary_names": [
+            "John Carter"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The article's main subject is clearly John Carter, as shown by multiple references: 'pensioner John Carter', 'John Carter has cerebral palsy', and direct quotes from Mr Carter himself (e.g., 'Mr Carter said...'). The subject name 'John Carter' exactly matches the article's primary name. There is no conflicting information regarding gender or other identifying details to suggest they are different people. Although no DOB is provided for the subject, the context (male pensioner named John Carter) aligns well, supporting a strong potential match."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 73,
+          "age_phrase": "The 73-year-old",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article states explicitly 'The 73-year-old,' referring to John Carter. No date of birth is provided for the subject, so no consistency check possible. Age mention is explicit and clearly about the subject."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "financial exploitation"
+          ],
+          "key_positives": [
+            "John Carter is described as an extremely generous man who gives his time and money to his local church."
+          ],
+          "key_negatives": [
+            "John Carter was exploited by pushy tele-fundraisers who would not take no for an answer.",
+            "He made over 800 direct debits to charities totaling more than $18,000, seriously depleting his savings and financial resources.",
+            "The collapsed telefundraising company Pareto Phone, associated with his donations, is under investigation for major cyber-attack and privacy breaches."
+          ],
+          "reasoning": "The article reports that John Carter, a vulnerable pensioner with cerebral palsy, was exploited by aggressive tele-fundraisers leading to financial harm ('His generosity had been exploited', 'They still wouldn't take no for an answer'). The involvement of a company under investigation for privacy and regulatory breaches supports adverse media classification related to financial exploitation."
+        },
+        "article_text": "John Carter nearly drained his savings giving to charity \u2014 his family say those who targeted him need to be put on notice By Jemima Burt Topic: Community and Society Sat 16 Dec 2023 Saturday 16 December 2023 Sat 16 Dec 2023 at 9:08pm John Carter has cerebral palsy and was targeted by telemarketers fundraising for charity. ABC News: Tyrone Dalton When pensioner John Carter was moving into care earlier this year, his family was sorting through his belongings and made an alarming discovery. His family describe him as an extremely generous man, who gives his time and money to his local church. The 73-year-old, who lives with cerebral palsy, had been living independently in Bendigo, Victoria on the disability pension before qualifying for the age pension. But a box of bank statements revealed his generosity had been exploited. Over six years he had made more than 800 direct debits to Australian charities, totalling more than $18,000. By 2023, he was giving over $500 each month across more than 20 charities, which accounted for nearly a quarter of his monthly income. As a pensioner, there was no opportunity for Mr Carter to claim the donations back through tax. 'They still wouldn't take no for an answer' Mr Carter said \"pushy\" tele-fundraisers had signed him up for all but one of the payments. \"I did tell them that I was on a pension, they still wouldn't take no for an answer,\" he said. \"They made it sound like they were so important, so urgent, we desperately need your support.\" The financial strain to keep up with the donations forced the pensioner to draw down on his savings. \"I knew my limits. [My savings] dropped by probably half, more than half,\" he said. John Carter\u2019s nephew Gary Van der Linde, who lives nearly 200km away, helped him cancel more than 20 direct debits each month. ABC News: Barrie Pullen I would have had no money eventually, I would have been bankrupt. Statements across two years reveal he paid more than $18,000 to 22 charities between 2018 and 2023. One charity was collecting two direct debits per month. Mr Carter's nephew Gary Van Der Linde, who lives 200 kilometres away in Lilydale, said it has seriously affected the former disability pensioner's finances. \"His savings have gone down very substantially. In the future for when he needs high care, he doesn't have the money,\" he said. Call centres 'need to be put on notice' John Carter's family said his story needed to be a warning to charities and professional fundraisers repeatedly targeting vulnerable individuals. \"These call centres need to be put on notice,\" Gary Van der Linde said. \"The lady in the bank, she said she's seeing it more and more. The elderly come in and they don't know how to cancel them.\" Calling donors is one of the most effective fundraising methods for Australian charities, and the professional fundraising industry is increasing its efficiency with artificial intelligence. Council On The Ageing (COTA) acting CEO Corey Irlam said the increased use of AI meant tele-fundraisers were able to contact donors more frequently. \"The cost of doing so is lower,\" he said. \"They're able to use AI to say 'Yes, this person is interested' then hand them over to a [real] person. \"This is seeing a larger number of donation calls going to the homes of everyday Australians than what we saw three or four years ago.\" He said the frequency of calls could make it harder for older and vulnerable Australians to say no. \"All too often we see businesses and professional fundraisers taking advantage of older people,\" Mr Irlam said. Corey Irlam said tele-fundraisers are using AI to increase frequency of calls, making it harder for vulnerable people to say no. ABC News: Andrew Whitington \"The thing about professional fundraisers is they often work on a commission, and unfortunately, that means that they're susceptible to pressure tactics or frequency of phone calls to wear the donor down. \"That's something that we think the industry fundraising code tries to address, but [it] doesn't always work [in] every situation.\" A self-regulated industry In 2022, the Australian Red Cross engaged professional fundraising firm Dataro which used AI technology to increase donations from standard-level donors. The company said the technology worked out how likely each donor would be to give between $500 and $5,000 a year if \"stewarded effectively\", and increased donations by $505,000 for its 2022 campaign. The professional fundraising industry is self-regulated, and fundraising companies and charities are meant to adhere to the Fundraising Institute of Australia code. John Carter and his niece Ruth Van der Linde and sister Janice Rokesky, who helped him cancel his donations. In a statement, Fundraising Institute of Australia CEO Katherine Raskob said the institute and its members took vulnerability very seriously, and would always work with the donor and their family to understand what happened and refund any donations made. Some of the well-known charities named in Mr Carter's bank statements used now collapsed Brisbane tele-fundraising company Pareto Phone, which is under investigation by the FIA Code Authority. The Brisbane company collected donations on behalf of dozens of well-known Australian charities over the phone for more than to two decades. It folded in October, two months after the ABC revealed it was the subject of a major cyber-attack which saw tens of thousands of donor details and highly sensitive employee records published on the dark web. The company is under investigation by Australia's privacy regulator for alleged breaches of privacy law, and its owner Merchant Place Investments potentially faced a fine of up to $50 million. It's alleged to have retained donor data for years beyond when it was required. Employees of the collapsed company have told the ABC many charities had called phone numbers so old that the donors had died years earlier."
+      }
+    }
+  },
+  {
+    "title": "Banking CEO Praised for Charity",
+    "input": {
+      "title": "Banking CEO Praised for Charity",
+      "summary": "John Carter, a generous pensioner, nearly drained his savings giving to charity, with his family warning against aggressive fundraisers.",
+      "subject_names": [
+        "John Carter"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "contains_age_phrase": false,
+      "sentiment": "positive",
+      "adverse_media_classification": "none",
+      "edge_case_reason": "Positive-only coverage, name match.",
+      "article_link": "https://www.abc.net.au/news/2023-12-17/pensioner-jonn-carter-taken-advantage-of-by-charities/103197048"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.975,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article is highly likely about the subject John Carter, supported by a 95% name match confidence and strong age indication at 73 years old. The content is adverse, detailing his exploitation by telemarketers causing financial harm and highlighting ongoing regulatory investigations. Given the clear match and significant negative impact, the case is classified as high risk and requires escalation.",
+      "audit_notes": "- NameMatchResult: strong match with 0.95 confidence, exact name and matching context.\n- DobAgeMatchResult: age stated as 73 years, fully confident but no DOB for direct comparison.\n- SentimentResult: clearly adverse media describing exploitation and regulatory breaches affecting the subject.\n- Combined confidence: averaged name and age confidence (0.95 and 1.0) = 0.975.\n- Decision justified by strong subject match and adverse content indicating high risk.",
+      "details": {
+        "metadata": {
+          "title": "Pensioner John Carter Exploited by Charities Through Aggressive Telefundraising",
+          "published_date": "2023-12-16T21:08:00",
+          "section": "Community and Society",
+          "source_domain": "abc.net.au",
+          "is_recent": true,
+          "reasoning": "The article provides a clear publication date and time: 'Sat 16 Dec 2023 at 9:08pm'. It appears in the 'Community and Society' topic mentioned at the start. The source domain is extracted from the URL 'abc.net.au'. The content is recent, dated December 2023, appropriate for AML screening."
+        },
+        "people": {
+          "main_person": "John Carter",
+          "other_people": [
+            "Gary Van der Linde",
+            "Corey Irlam",
+            "Ruth Van der Linde",
+            "Janice Rokesky",
+            "Katherine Raskob"
+          ],
+          "author_names": [
+            "Jemima Burt"
+          ],
+          "reasoning": "The article centers on John Carter, a 73-year-old pensioner with cerebral palsy, who was exploited by charities via aggressive telemarketing. The narrative focuses on his experience, financial impact, and family actions to stop the donations. Other individuals are family members, officials, or industry representatives providing commentary or assistance. Jemima Burt is credited as the author."
+        },
+        "context": {
+          "locations": [
+            "Bendigo, Victoria",
+            "Lilydale"
+          ],
+          "organisations": [
+            "local church"
+          ],
+          "roles_or_occupations": [
+            "pensioner"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article clearly identifies John Carter as a 73-year-old pensioner living in Bendigo, Victoria, and mentions his generosity towards his local church. His nephew lives in Lilydale, linking locations relevant to his context. No conflicting details with the subject provided; the roles and associations extracted align well with the subject described."
+        },
+        "name_match": {
+          "subject_name_normalized": "john carter",
+          "article_primary_names": [
+            "John Carter"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The article's main subject is clearly John Carter, as shown in multiple references: 'John Carter nearly drained his savings giving to charity' and 'When pensioner John Carter was moving into care earlier this year...'. The subject name matches exactly 'John Carter'. The context matches a pensioner living in Bendigo, Victoria, targeted by telemarketers, which is consistent with the article's central figure. There are no conflicting details such as different gender, time period, or location mentioned. Therefore, this is a strong potential match to the subject John Carter."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 73,
+          "age_phrase": "The 73-year-old, who lives with cerebral palsy",
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article describes John Carter as 'The 73-year-old', providing an explicit age phrase. However, no date of birth for the subject was provided for comparison, so consistency cannot be determined."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "exploitation of vulnerable person",
+            "possible regulatory breaches by fundraising company"
+          ],
+          "key_positives": [
+            "John Carter is described as an extremely generous man.",
+            "He gives his time and money to his local church."
+          ],
+          "key_negatives": [
+            "John Carter was exploited by telemarketers fundraising for charity.",
+            "Over six years he made more than 800 direct debits totaling over $18,000, which caused financial strain.",
+            "He was targeted despite informing callers he was on a pension.",
+            "The fundraising company Pareto Phone is under investigation by regulatory authorities for breaches of privacy law and other issues."
+          ],
+          "reasoning": "The article states that John Carter, a vulnerable pensioner with cerebral palsy, was exploited by 'pushy' tele-fundraisers who took advantage of his generosity and inability to refuse, leading to serious financial strain ('His generosity had been exploited', 'They still wouldn't take no for an answer'). The fundraising company involved is under investigation by regulators ('under investigation by Australia's privacy regulator for alleged breaches of privacy law'). This constitutes adverse media due to exploitation and potential regulatory breaches affecting the subject."
+        },
+        "article_text": "John Carter nearly drained his savings giving to charity \u2014 his family say those who targeted him need to be put on notice By Jemima Burt Topic: Community and Society Sat 16 Dec 2023 Saturday 16 December 2023 Sat 16 Dec 2023 at 9:08pm John Carter has cerebral palsy and was targeted by telemarketers fundraising for charity. ABC News: Tyrone Dalton When pensioner John Carter was moving into care earlier this year, his family was sorting through his belongings and made an alarming discovery. His family describe him as an extremely generous man, who gives his time and money to his local church. The 73-year-old, who lives with cerebral palsy, had been living independently in Bendigo, Victoria on the disability pension before qualifying for the age pension. But a box of bank statements revealed his generosity had been exploited. Over six years he had made more than 800 direct debits to Australian charities, totalling more than $18,000. By 2023, he was giving over $500 each month across more than 20 charities, which accounted for nearly a quarter of his monthly income. As a pensioner, there was no opportunity for Mr Carter to claim the donations back through tax. 'They still wouldn't take no for an answer' Mr Carter said \"pushy\" tele-fundraisers had signed him up for all but one of the payments. \"I did tell them that I was on a pension, they still wouldn't take no for an answer,\" he said. \"They made it sound like they were so important, so urgent, we desperately need your support.\" The financial strain to keep up with the donations forced the pensioner to draw down on his savings. \"I knew my limits. [My savings] dropped by probably half, more than half,\" he said. John Carter\u2019s nephew Gary Van der Linde, who lives nearly 200km away, helped him cancel more than 20 direct debits each month. ABC News: Barrie Pullen I would have had no money eventually, I would have been bankrupt. Statements across two years reveal he paid more than $18,000 to 22 charities between 2018 and 2023. One charity was collecting two direct debits per month. Mr Carter's nephew Gary Van Der Linde, who lives 200 kilometres away in Lilydale, said it has seriously affected the former disability pensioner's finances. \"His savings have gone down very substantially. In the future for when he needs high care, he doesn't have the money,\" he said. Call centres 'need to be put on notice' John Carter's family said his story needed to be a warning to charities and professional fundraisers repeatedly targeting vulnerable individuals. \"These call centres need to be put on notice,\" Gary Van der Linde said. \"The lady in the bank, she said she's seeing it more and more. The elderly come in and they don't know how to cancel them.\" Calling donors is one of the most effective fundraising methods for Australian charities, and the professional fundraising industry is increasing its efficiency with artificial intelligence. Council On The Ageing (COTA) acting CEO Corey Irlam said the increased use of AI meant tele-fundraisers were able to contact donors more frequently. \"The cost of doing so is lower,\" he said. \"They're able to use AI to say 'Yes, this person is interested' then hand them over to a [real] person. \"This is seeing a larger number of donation calls going to the homes of everyday Australians than what we saw three or four years ago.\" He said the frequency of calls could make it harder for older and vulnerable Australians to say no. \"All too often we see businesses and professional fundraisers taking advantage of older people,\" Mr Irlam said. Corey Irlam said tele-fundraisers are using AI to increase frequency of calls, making it harder for vulnerable people to say no. ABC News: Andrew Whitington \"The thing about professional fundraisers is they often work on a commission, and unfortunately, that means that they're susceptible to pressure tactics or frequency of phone calls to wear the donor down. \"That's something that we think the industry fundraising code tries to address, but [it] doesn't always work [in] every situation.\" A self-regulated industry In 2022, the Australian Red Cross engaged professional fundraising firm Dataro which used AI technology to increase donations from standard-level donors. The company said the technology worked out how likely each donor would be to give between $500 and $5,000 a year if \"stewarded effectively\", and increased donations by $505,000 for its 2022 campaign. The professional fundraising industry is self-regulated, and fundraising companies and charities are meant to adhere to the Fundraising Institute of Australia code. John Carter and his niece Ruth Van der Linde and sister Janice Rokesky, who helped him cancel his donations. In a statement, Fundraising Institute of Australia CEO Katherine Raskob said the institute and its members took vulnerability very seriously, and would always work with the donor and their family to understand what happened and refund any donations made. Some of the well-known charities named in Mr Carter's bank statements used now collapsed Brisbane tele-fundraising company Pareto Phone, which is under investigation by the FIA Code Authority. The Brisbane company collected donations on behalf of dozens of well-known Australian charities over the phone for more than to two decades. It folded in October, two months after the ABC revealed it was the subject of a major cyber-attack which saw tens of thousands of donor details and highly sensitive employee records published on the dark web. The company is under investigation by Australia's privacy regulator for alleged breaches of privacy law, and its owner Merchant Place Investments potentially faced a fine of up to $50 million. It's alleged to have retained donor data for years beyond when it was required. Employees of the collapsed company have told the ABC many charities had called phone numbers so old that the donors had died years earlier."
+      }
+    }
+  },
+  {
+    "title": "Banking CEO Praised for Charity",
+    "input": {
+      "title": "Banking CEO Praised for Charity",
+      "summary": "John Carter, a generous pensioner, nearly drained his savings giving to charity, with his family warning against aggressive fundraisers.",
+      "subject_names": [
+        "John Carter"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "contains_age_phrase": false,
+      "sentiment": "positive",
+      "adverse_media_classification": "none",
+      "edge_case_type": "Positive-only person",
+      "edge_case_reason": "Positive coverage only, exact name match.",
+      "article_link": "https://www.bbc.com/news/uk"
+    },
+    "output": {
+      "is_subject_match": false,
+      "match_confidence": 1.0,
+      "overall_risk_label": "no_match",
+      "decision": "discard_as_not_relevant",
+      "human_readable_summary": "The article does not mention John Carter or any related details, and there is no indication that the subject is featured. No adverse information is present, and confidence is high that the person described is not the subject. Therefore, the article is not relevant for further AML review.",
+      "audit_notes": "- NameMatchResult: No mention of John Carter; name match confidence 1.0 indicating no match.\n- DobAgeMatchResult: No date of birth or age details; confidence 1.0.\n- SentimentResult: Neutral sentiment with no adverse media or negative information associated with the subject.",
+      "details": {
+        "metadata": {
+          "title": "Russian spy ship pointed lasers at RAF pilots, says defence secretary",
+          "published_date": null,
+          "section": "Politics",
+          "source_domain": "bbc.com",
+          "is_recent": true,
+          "reasoning": "Title inferred from first headline: 'Russian spy ship pointed lasers at RAF pilots tracking it, says defence secretary.' Published date not explicitly stated, but '4 hrs ago' under headline implies recent. Section most aligned is 'Politics' due to defence content. Source domain derived from URL: 'bbc.com'. Very recent based on timeline indicators."
+        },
+        "people": {
+          "main_person": null,
+          "other_people": [
+            "John Healey",
+            "David Carrick",
+            "Vogue Williams",
+            "Tom Read Wilson",
+            "Laura Anne Jones",
+            "Clive Lewis",
+            "Andy Burnham",
+            "Mahmood",
+            "Alex Davies-Jones",
+            "Lee Claydon",
+            "Ren\u00e9e Zellweger",
+            "Noor Nanji",
+            "Samir Shah"
+          ],
+          "author_names": [],
+          "reasoning": "The article text is a collection of multiple unrelated news headlines and snippets mentioning various individuals, none of whom is named John Carter (the subject). No single person is the central focus of the entire text, which appears to be aggregated news summaries rather than a coherent article about one individual."
+        },
+        "context": {
+          "locations": [],
+          "organisations": [],
+          "roles_or_occupations": [],
+          "subject_context_consistent": null,
+          "confidence": 0.0,
+          "reasoning": "The article text does not mention John Carter or provide any contextual information about him, such as locations, organisations, or roles associated with him. Therefore, there is no basis to assess consistency with the subject."
+        },
+        "name_match": {
+          "subject_name_normalized": "john carter",
+          "article_primary_names": [],
+          "is_name_potential_match": false,
+          "confidence": 1.0,
+          "reasoning": "The article does not mention the name John Carter at all. It covers multiple subjects such as John Healey, David Carrick, Laura Anne Jones, and others, but none are named John Carter or show any contextual link to the subject. Therefore, there is no evidence the subject 'John Carter' is the person described in the article."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": null,
+          "age_phrase": null,
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "The article contains no explicit age or date of birth information related to John Carter or any age-related clues about the subject."
+        },
+        "sentiment": {
+          "overall_sentiment": "neutral",
+          "is_adverse_media": false,
+          "adverse_categories": [],
+          "key_positives": [],
+          "key_negatives": [],
+          "reasoning": "The article text does not mention John Carter or associate him with any adverse media or negative/positive details. No information relates to fraud, corruption, or other financial crimes involving him."
+        },
+        "article_text": "News Russian spy ship pointed lasers at RAF pilots tracking it, says defence secretary John Healey says he has updated the Navy's rules for tracking the vessel after the \"dangerous\" move. 4 hrs ago Serial rapist and former police officer David Carrick guilty of more sex offences David Carrick is already serving a life sentence for 71 offences of sexual violence. England Vogue Williams and Tom Read Wilson enter TV jungle as I'm A Celebrity's late entrants The late entrants' arrival was teased in Wednesday night's episode of the ITV show. 18 mins ago Culture Reform politician suspended from Welsh Parliament over racial slur Laura Anne Jones apologised for her behaviour after offensive comments were made over WhatsApp. 2 hrs ago Wales Amber warning for snow as freezing cold snap grips UK Forecasters say temperatures will fall below zero overnight and there will be more snow and ice in some areas on Thursday. 56 mins ago Labour MP Clive Lewis offers seat to Burnham for Starmer challenge Clive Lewis says he would step down to allow Mayor Andy Burnham the chance to become Labour leader. 5 hrs ago Politics Mahmood hints at shake-up of 'irrational' policing structure The home secretary says there is a postcode lottery in the performance of forces in England and Wales. 6 hrs ago Bar owner bans solo drinkers and is 'baffled' by reaction Some people are unhappy that they are not allowed to drink on their own in a bar in Altrincham. Pro-Palestine activists accused of harassing MP have convictions overturned A judge said prosecuting the pair for their confrontation with Alex Davies-Jones was not necessary. Stories from court hearings as home repossessions hit five-year high BBC journalists in the East of England and London attended various county courts as mortgage-holders and renters appeared in front of judges. Oasis fan's death at Wembley was 'tragic accident' Lee Claydon, 45, fell from an upper level at Wembley Stadium during an Oasis concert. Time taken to bring shoplifters to justice is 'unacceptable', retailers tell BBC The BBC followed a series of shoplifting cases which highlight how shops have waited months for thieves to be brought to justice. Watch/Listen Watch: Moment Bridget Jones statue is unveiled in London Ren\u00e9e Zellweger has called a new statue \"adorable,\" adding: \"I think she's much cuter than me.\" BBC at scene of severe flooding after Storm Claudia A major incident has been declared in Monmouth following severe flooding caused by Storm Claudia. Watch: How the BBC works... in under two minutes Culture reporter Noor Nanji explains how the BBC is funded and governed, amid controversy that has lead to the departures of two senior bosses. 'We should have acted earlier', says BBC chair Samir Shah Shah was asked why the corporation did not investigate concerns around the editing of a BBC documentary earlier. Features & analysis How serious is the Russian spy ship move? The movements of the Yantar is a worry for Britain's defence chiefs and provocative. 'I worked, I paid taxes - then the bank took my home' Homeowners facing repossession homelessness doubles in three years, BBC investigation finds. Your pictures of snow and ice across the UK BBC Weather Watchers send in pictures of snowmen, wintry landscapes and dogs braving the cold snap. LinkedIn 'headhunters' and MI5 warning - China spying threat troubles MPs Despite the government's efforts to thaw tensions with Beijing, MPs were warned this week of spying threats from China. Our son's about to turn three - finding new childcare has left us at our wits' end The number of childminders in England is falling - with one charity warning they could all be gone by 2033. More from the UK Rapist ex-Met officer guilty of more sex offences Supreme Court rules Christian-focused RE taught in NI schools is unlawful The Christian religious education taught in schools in Northern Ireland is unlawful, the UK Supreme Court has ruled. Scotland fans start planning World Cup party after Hampden rollercoaster Supporters are looking at routes to North America after the men's side sealed World Cup qualification. Latest updates Russian spy ship pointed lasers at RAF pilots tracking it, says UK 7 hrs ago Letter issued to help collapsed airline passengers The Civil Aviation Authority shares a letter to help Blue Islands' passengers get their money back. Majority of Blue Islands staff made redundant Nearly 100 Blue Islands employees are laid off after the airline ceased trading. What are cold weather payments and who can get them? Some people in England, Wales and Northern Ireland can get help with heating costs during cold spells. 9 hrs ago Lender halts new car loans in Crown dependencies Black Horse says a \"small number\" of staff are affected by the changes. 12 hrs ago 19 hrs ago UK lacks plan to defend itself from invasion, MPs warn A highly critical report says the UK does not have the resources it needs to deal with complex military threats. ..."
+      }
+    }
+  }
+]

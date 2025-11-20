@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Builder Convicted Amid Organisational Failures",
+    "input": {
+      "edge_case_type": "Organisation as main subject, person named",
+      "title": "Builder Convicted Amid Organisational Failures",
+      "summary": "Mark Killick, described as a 'cowboy builder', was convicted of fraud while the article discusses failures that allowed him to keep operating.",
+      "subject_names": [
+        "Mark Killick"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/articles/cg43q3rl3q7o"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.925,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article is a strong match to Mark Killick with a high confidence score of 0.925 based on name and age references. It describes multiple confirmed fraud convictions and ongoing criminal behavior, representing clearly adverse information. Due to clear identity match and highly adverse content, this case warrants high risk escalation.",
+      "audit_notes": "- NameMatchResult: strong match (0.95 confidence), explicit multiple name mentions.\n- DobAgeMatchResult: age consistent (0.9 confidence), no DOB conflict.\n- SentimentResult: highly adverse, multiple fraud-related convictions and criminal charges detailed.",
+      "details": {
+        "metadata": {
+          "title": "Mark Killick convicted of \u00a31.25m fraud in building trade",
+          "published_date": "2025-10-24",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": true,
+          "reasoning": "The article text states 'Published 24 October 2025' and discusses recent conviction of Mark Killick involved in fraud within the building trade. The URL is from bbc.co.uk. The content is clearly crime-related. The publication date is in the future from current date but given the text, we accept it as is. This makes the article very recent for AML screening."
+        },
+        "people": {
+          "main_person": "Mark Killick",
+          "other_people": [
+            "Martin Jones",
+            "Jonathan Gilbert",
+            "Alli Gay",
+            "Martyn Nicklin"
+          ],
+          "author_names": [
+            "Martin Jones West"
+          ],
+          "reasoning": "The article centers on Mark Killick, detailing his multiple fraud convictions, name changes, and criminal activities as a cowboy builder. Other individuals like Jonathan Gilbert and Alli Gay are mentioned as experts or officials commenting on the situation, not as the main subject. Martin Jones West appears to be the reporter credited in the article."
+        },
+        "context": {
+          "locations": [
+            "West of England",
+            "South Wales",
+            "Cardiff",
+            "Swansea",
+            "Bristol"
+          ],
+          "organisations": [
+            "TD Cole",
+            "Pro-Fit Builders"
+          ],
+          "roles_or_occupations": [
+            "cowboy builder",
+            "building trade professional",
+            "convicted fraudster"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article clearly identifies Mark Killick as a prolific cowboy builder operating primarily in the West of England and having criminal convictions dating back to 1995 in South Wales, including courts in Cardiff and Swansea. He used business names including Pro-Fit Builders and TD Cole. His roles as a builder and multiple fraud convictions align with the subject details provided. There are no contradictory details related to the subject."
+        },
+        "name_match": {
+          "subject_name_normalized": "mark killick",
+          "article_primary_names": [
+            "Mark Killick"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The article\u2019s main subject is Mark Killick, named explicitly multiple times in the core narrative, e.g., 'Mark Killick has been convicted of fraud four times since 2008' and 'Mark Killick is one of Britain's most prolific cowboy builders.' The article describes his criminal convictions and name changes but does not mention any conflicting personal details such as different gender or location. The subject name exactly matches 'Mark Killick,' and the article details his fraudulent activities and aliases, consistent with the screening subject. Therefore, it is a strong potential match."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 56,
+          "age_phrase": "The 56-year-old",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article explicitly states 'The 56-year-old' referring to Mark Killick. No DOB provided for the subject, so consistency cannot be confirmed or refuted."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "criminal charges"
+          ],
+          "key_positives": [
+            "None evident given the context"
+          ],
+          "key_negatives": [
+            "Convicted of fraud four times since 2008",
+            "Latest crimes involved 37 victims losing over \u00a31.25m",
+            "Repeatedly defrauded customers by lying and not completing work",
+            "Changed name twice to avoid detection",
+            "Decades-long criminal record including bankruptcy and multiple fraud convictions",
+            "Sentenced to five years in prison in 2014, released in 2016",
+            "Used multiple business names to continue fraudulent activities"
+          ],
+          "reasoning": "The article details multiple confirmed instances of fraud and criminal convictions involving Mark Killick, including four fraud convictions since 2008 and an estimated loss to victims over \u00a31.25m. It highlights his modus operandi of deceiving customers, changing names, and continuing fraudulent business despite prior convictions and legal restrictions. This clearly constitutes adverse media related to fraud and criminal charges."
+        },
+        "article_text": "Image source, Submitted Image caption, Mark Killick has been convicted of fraud four times since 2008 Martin Jones West investigations Published 24 October 2025 Mark Killick is one of Britain's most prolific cowboy builders and has criminal convictions dating back to 1995. His latest crimes, which led to his fourth fraud conviction , involved 37 victims who police estimate lost more than \u00c2\u00a31.25m between them. The 56-year-old was able to leave prison, legally change his name twice and continue to work in the building trade in the West of England - where he was able to repeatedly defraud customers. The prosecution in his latest trial said he \"never intended\" to complete work and \"lied\" to \"get money out of the customer's bank account and into his\". Many of his victims had tried to check him out but found no red flags. Instead, they read glowing reviews online and found a slick website. The case has prompted fresh calls for tighter rules on convicted fraudsters and more regulation in the building trade, with fears the system is failing victims. \u00e2\u0080\u009cCowboy builder: how he pulled off \u00c2\u00a31million fraud\u00e2\u0080\u009d Attribution Sounds Avon and Somerset Police Mark Killick has used a variety of personal and business names for his work in the the building trade Criminal past Mark Killick had a decades-long criminal record, but his customers were unaware of it. The Ministry of Justice (MoJ) said his first convictions were at magistrates' courts in South Wales in 1995 and 1996, although it is unclear what offences he committed. Killick was made bankrupt in 2004 and was given a 12-year Bankruptcy Restriction Order in January 2006. This prevented him from accepting payments of more than \u00c2\u00a3500 without telling people about the order. His first confirmed convictions for fraud were in 2008 and 2009, when he admitted offences at Cardiff and Swansea crown courts respectively after failing to finish domestic building work. In 2014, Killick pleaded guilty to fraud by false representation while trading as Mark Jenkins or Pro-Fit Builders. He accepted losses of \u00c2\u00a3573,000 to 42 victims and was sentenced to five years in prison at Bristol Crown Court but was released in 2016 and served the rest of his sentence on licence. Name changes Mark Killick has worked in the building trade for most of his life and has used multiple business and personal names. He was born Mark Killick but first changed his name to Mark Jenkins, which he said was in tribute to his grandfather. He changed his name to Marc Cole in 2019 and said this was to fit in with his new wife and her family. Killick was not doing anything illegal by changing his name, but it meant some customers did not connect him to his crimes. Jonathan Gilbert is a lecturer in criminology at the University of the West of England, in Bristol. He has first-hand knowledge of the UK's fraud laws as he was convicted of \u00c2\u00a330m mortgage fraud in 2014 Now released on licence, Mr Gilbert studies financial crime and regulation, and advises business and public sector agencies on white collar crime. He said there were in general no restrictions on fraudsters changing their names. \"They can simply go online and go to one of the providers of deed polls,\" he explained. \"They can pay a small extra fee and get certified copies to send to multiple banks or utility companies to reinvent themselves.\" Jonathan Gilbert was jailed for fraud in 2014 and believes a central register of convicted fraudsters could help protect the public Mr Gilbert added: \"Fraudsters should perhaps have extended licence conditions, certainly if their MO [modus operandi] involved changing their name.\" The MoJ said it could not discuss licence conditions for individual offenders. Killick's latest trial did not hear about any restrictions on him working in the building trade after 2019. Mr Gilbert said he believed a central register of convicted fraudsters could be created to enable the public to spot rogue traders. \"In certain areas, certainly in bank and mortgage fraud, you have systems. They will have details of previous criminal convictions,\" he said. \"But vulnerable homeowners will not have those tools. They just have to rely on the internet.\" The Home Office website says it wants to make it harder for people to change their names \"to support criminality\" but it is unclear what checks were made on Mark Killick in 2019. Media caption, Regulation Builders are not required to be licensed to trade even if they are undertaking jobs worth tens of thousands of pounds. Alli Gay is the south-west regional president of construction trade body the Federation of Master Builders (FMB), which wants a law change to force builders to be licensed. \"If you're a good builder and you are really invested in providing a good quality product to your client, that [getting a licence] shouldn't be at an extra cost,\" said Ms Gay, who also runs building firm Chi Homes. Alli Gay, of the Federation of Master Builders, believes the building trade should be licensed \"We're in an industry where most other professionals are regulated. Planning, lawyers, finance - it's all regulated,\" Ms Gay added. \"But the builder that's actually putting together your home is not.\" The FMB said the lack of confidence in builders had put homeowners off getting work done. It estimated this led to \u00c2\u00a310bn worth of inactivity in the economy. It said the public may have lost as much as \u00c2\u00a314.3bn to cowboy builders, with 15% of respondents to its recent survey external reporting an average loss of \u00c2\u00a31,759. Those opposed to licensing, such as the National Federation of Builders, said it would add costs to the industry and could see some builders quitting the trade. In a statement, a government spokesperson said: \"We regularly review how standards within the construction sector could be improved, but any action taken must be robust, proportionate and evidence-based.\" Can you trust reviews? Many customers spoke of how Killick's professional online presence and abundance of positive reviews helped convince them to hire him. It remains unclear how many of these reviews were genuine. Killick paid money to Google to promote his website, which he said in court was no different from other businesses. A spokesperson from Google UK said it had stopped 5.1 billion \"bad ads\" in 2024, and was \"investing heavily\" in artificial intelligence technology to remove ads that violated its policies. TD Cole Many customers said they were enticed by the sleek website for Killick's company, TD Cole Martyn Nicklin from Bristol Trading Standards advised people to get multiple quotes and speak directly to people as well as doing online research. \"Don't necessarily rely on reviews that you can read online that aren't always verified,\" he added. He said it often paid to be patient, as some good builders had waiting times of between six months and two years. \"Be wary of anyone that can start straight away and wary of anyone that wants large cash upfront payments,\" Mr Nicklin added. \"Most reputable builders will be happy to put in a payment schedule for you.\" Get in touch Tell us which stories we should cover in Bristol Contact form Follow BBC Bristol on Facebook and Instagram . Send your story ideas to us on email or via WhatsApp on 0800 313 4630 Related topics Bristol Fraud Gloucestershire More on this story Builder in \u00c2\u00a32m fraud trial 'spent \u00c2\u00a328,000 on Rolex' 28 July Builder stole 'equivalent of lottery win', jury told 29 May Builder turned home into 'junkyard', jury told 2 June Related internet links Federation of Master Builders (FMB)"
+      }
+    }
+  }
+]

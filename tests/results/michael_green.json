@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Byline-only Appearance",
+    "input": {
+      "edge_case_type": "Name present only in quote/byline",
+      "title": "Byline-only Appearance",
+      "summary": "The only mention of 'Michael Green' in this fraud report comes from a source quote and a contributing author\u2019s name.",
+      "subject_names": [
+        "Michael Green"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.com/news/business-38772660"
+    },
+    "output": {
+      "is_subject_match": false,
+      "match_confidence": 0.9,
+      "overall_risk_label": "no_match",
+      "decision": "discard_as_not_relevant",
+      "human_readable_summary": "The article concerns Michael Bancroft, not Michael Green, with no indication that they are the same person. Despite the article's adverse content about fraud and bribery, the name mismatch leads to a conclusion of no subject match. Therefore, this case is discarded as not relevant to Michael Green.",
+      "audit_notes": "- NameMatchResult: strong mismatch; article about Michael Bancroft, not Michael Green (confidence 0.9).\n- DobAgeMatchResult: no age/DOB info for Michael Green; confirms no match (confidence 1.0).\n- SentimentResult: article is adverse about fraud/bribery related to Michael Bancroft, but irrelevant to subject due to name mismatch.",
+      "details": {
+        "metadata": {
+          "title": "HBOS bankers convicted of bribery and fraud costing millions",
+          "published_date": "2017-01-30",
+          "section": "Business",
+          "source_domain": "bbc.com",
+          "is_recent": false,
+          "reasoning": "Title derived from opening lines describing convictions for bribery and fraud; published date stated as 'Published 30 January 2017'; section identified as 'Business' from content and URL; source domain from URL 'bbc.com'; the publication is from 2017, so not recent for AML screening purposes."
+        },
+        "people": {
+          "main_person": "Michael Bancroft",
+          "other_people": [
+            "Lynden Scourfield",
+            "Mark Dobson",
+            "David Mills",
+            "Alison Mills",
+            "John Cartwright",
+            "Jonathan Cohen",
+            "Stephen Rowland",
+            "Brian O'Neill QC",
+            "Nikki Turner",
+            "Paul Turner"
+          ],
+          "author_names": [
+            "Andy Verity",
+            "David Lewis"
+          ],
+          "reasoning": "The article is primarily about Michael Bancroft, who was one of the six people found guilty of bribery and fraud related to HBOS banking misconduct. The text highlights his conviction and role alongside others like David Mills and Lynden Scourfield, focusing on their corrupt activities. Michael Bancroft is mentioned repeatedly in context of the fraud, making him the main subject rather than the other individuals who are either accomplices, officials, or victims."
+        },
+        "context": {
+          "locations": [
+            "Southwark Crown Court",
+            "London"
+          ],
+          "organisations": [
+            "HBOS",
+            "Quayside Corporate Services",
+            "Lloyds Banking Group"
+          ],
+          "roles_or_occupations": [
+            "bank manager",
+            "convicted individual",
+            "businessman associated with fraud"
+          ],
+          "subject_context_consistent": false,
+          "confidence": 0.8,
+          "reasoning": "The article discusses Michael Bancroft, not Michael Green, as a convicted individual involved in HBOS fraud cases centered at Southwark Crown Court in London. The named roles and organisations relate to Bancroft and others but Michael Green is not mentioned at all, making the context inconsistent with the subject provided."
+        },
+        "name_match": {
+          "subject_name_normalized": "michael green",
+          "article_primary_names": [
+            "michael bancroft"
+          ],
+          "is_name_potential_match": false,
+          "confidence": 0.9,
+          "reasoning": "The main individual related to the article's subject group is Michael Bancroft, not Michael Green. The snippet states, 'Michael Bancroft, were convicted... on counts including bribery, fraud and money laundering.' There is no mention of Michael Green in the article narrative. Given the difference in last names and no indication that 'Green' is an alias or variation, this is a strong mismatch."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": null,
+          "age_phrase": null,
+          "is_dob_or_age_consistent": null,
+          "confidence": 1.0,
+          "reasoning": "No explicit age or DOB information about Michael Green is given in the article; the text mentions Michael Bancroft and others, not Michael Green."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "bribery",
+            "money laundering",
+            "corruption"
+          ],
+          "key_positives": [],
+          "key_negatives": [
+            "Michael Bancroft convicted on counts including bribery, fraud, and money laundering",
+            "Involved in arranging sex parties, exotic foreign holidays, cash bribes in exchange for corrupt favors",
+            "Used bank's customers and money dishonestly to enrich themselves"
+          ],
+          "reasoning": "Article states that Michael Bancroft was convicted for bribery, fraud, and money laundering ('Michael Bancroft... were convicted at Southwark Crown Court on counts including bribery, fraud and money laundering'). It describes corrupt activities linked to him, such as arranging sex parties and cash bribes to influence bank business, resulting in large financial harm."
+        },
+        "article_text": "Image source, Image caption, Michael Bancroft, one of those convicted for his part in the fraud between 2003 and 2007, after a four-month trial at Southwark Crown Court. Andy Verity & David Lewis BBC Business correspondent Six people, including two former HBOS bankers, have been found guilty of bribery and fraud that cost the bank's business customers and shareholders hundreds of millions of pounds. Lynden Scourfield, a former manager with HBOS, pleaded guilty to six counts including corruption. Five other defendants, including so-called turnaround consultants, were also convicted. In exchange for bribes, Scourfield told customers to use the turnaround firm. Mark Dobson, who was also a manager at HBOS, David Mills, and Michael Bancroft, were convicted at Southwark Crown Court on counts including bribery, fraud and money laundering. Alison Mills, and John Cartwright were also convicted for their parts in the conspiracy while one other defendant, Jonathan Cohen, was acquitted. Scourfield had been convicted after pleading guilty at an earlier trial last year. The five newly convicted people will be sentenced on Thursday. HBOS: A highly unusual case The CPS special prosecutor, Stephen Rowland, said the case was one of the largest and most complex the special fraud division had ever prosecuted. \"It involved millions of documents, a lot of the material we had to look at was electronic and of course in this day and age the capacity for electronic media is huge,\" he said. \"So we had a very large amount of material to work through and to consider.\" Sex parties Businessmen Bancroft and Mills arranged sex parties, exotic foreign holidays, cash in brown envelopes and other favours for Scourfield between 2003 and 2007. In exchange for the bribes, Scourfield would require the bank's small business customers to use the firm of consultants run by Mills and his wife Alison, Quayside Corporate Services. Quayside purported to be turnaround consultants, offering business experience and expertise to help small business customers improve their fortunes. But far from helping turn businesses around, Mills and his associates were milking them for huge fees and using their relationship with the bank to bully the business owners and strip them of their assets. In cash fees alone, according to prosecutors in the trial, \u00c2\u00a328m went through the accounts of Mills, his wife and their associated companies. Pattern of abuse But the true value to Mills of the corrupt relationship with Scourfield was much greater. \"What Scourfield gave Mills in addition to fees was the opportunity to take control of the various businesses and, in some cases, to acquire ownership of them,\" prosecutor Brian O'Neill QC told the court. \"Mills and his associates used the bank's customers and the banks's money dishonestly to enrich themselves.\" Getty Images Mr O'Neill said there was a pattern of abuse of small business customers whose companies were \"run down by incompetency or as a deliberate policy or as a combination of the two\". This included: complete disregard for the interests of existing shareholders and creditors increasing levels of bank funding improperly diverted between companies and to Mills entities the theft of company money and of money due to the bank; and eventual insolvency resulting in huge losses to the bank and others. The bank, which was rescued by Lloyds Banking Group during the financial crisis, internally estimated the cost of Scourfield's lending activity as more than \u00c2\u00a3300m in early 2007. However, that figure excludes further losses crystallised since that date and huge losses to business customers, many of whom have been ruined. Sources close to the investigation say the total value of the fraud may be closer to \u00c2\u00a31bn. 'Great financial loss' Once appointed as turnaround consultants, Mills and Bancroft would put forward inflated cash flow forecasts and other figures. HBOS would then extend far more money than the businesses needed, which Quayside would siphon off not only in fees but in loans that were lent on to other companies controlled by Mills and others - loans that would never be repaid. If the business had good prospects, Bancroft or Mills would use their relationship with the bank, threatening owners that if they failed to accept their instructions, the bank would pull the plug. They would then insist on a seat on the board, or a shareholding, or eventually, control of the business. \"Scourfield paid absolutely no regard to his overriding duty as an employee of the bank to protect its financial interests. Neither was Scourfield, nor Mills nor Bancroft, troubled by the proper interests of the directors, shareholders and creditors of the various companies,\" Mr O'Neill said. \"Many individuals suffered great financial loss and considerable personal trauma as a result of their callous disregard for the businesses they had established, owned or managed.\" Jonathan Cohen leaving Southwark Crown Court in London where he was acquitted of fraudulent trading and conspiracy to conceal criminal property A decade on, HBOS's owner Lloyds Banking Group still has not acknowledged the full scale of the fraud - or offered to compensate its victims. HBOS said: \"The trial highlighted criminal actions that bear no reflection on the behaviours of the vast majority of the employees of HBOS at the time or in the group today.\" The affected bank customers included music publishers Nikki and Paul Turner, who uncovered the fraud in 2007 by investigating publicly available records even as the bank sought to pull the plug on their business. When they presented their evidence to the bank's board, first HBOS and then Lloyds Banking Group, the bank dismissed their allegations and instead sought to repossess their home. File on Four will have a special report about the case on BBC Radio Four on Tuesday 31 January at 20:00. More on this story Published 30 January 2017"
+      }
+    }
+  }
+]

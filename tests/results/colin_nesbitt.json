@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Charity Founder Convicted of Theft",
+    "input": {
+      "edge_case_type": "Founder raising money\u2014negative",
+      "title": "Charity Founder Convicted of Theft",
+      "summary": "Colin Nesbitt, founder of Little Heroes Cancer Trust, was found guilty of stealing \u00a387,000 from the children\u2019s cancer charity he ran.",
+      "subject_names": [
+        "Colin Nesbitt"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "article_link": "https://www.bbc.co.uk/news/uk-england-leeds-56500262"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.9,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article strongly matches the subject Colin Nesbitt with high confidence based on name and age references. It reports adverse information including conviction for fraud and financial crime related to charity funds misuse. Given the clear identity match and negative content, this is classified as high risk and should be escalated.",
+      "audit_notes": "- NameMatchResult: High confidence exact name match, multiple mentions, no conflicting info; - DobAgeMatchResult: Age mentioned as 60 matching screening info, no DOB but consistent; - SentimentResult: Adverse media confirmed with credible financial crime convictions and regulatory actions; thus high risk escalation warranted.",
+      "details": {
+        "metadata": {
+          "title": "Children's cancer charity founder convicted of stealing over \u00a387,000",
+          "published_date": "2021-02-16",
+          "section": "Crime",
+          "source_domain": "bbc.co.uk",
+          "is_recent": false,
+          "reasoning": "The date 'Published 16 February 2021' indicates article publication date; the text discusses conviction for theft and abuse of position, fitting 'Crime' section; extracted domain 'bbc.co.uk' from URL."
+        },
+        "people": {
+          "main_person": "Colin Nesbitt",
+          "other_people": [
+            "Matthew Donkin",
+            "Judge Jonathan Gibson"
+          ],
+          "author_names": [],
+          "reasoning": "The article is focused on Colin Nesbitt, the founder of the Little Heroes Cancer Trust, who was convicted of stealing money from the charity and abusing his position as director. Other people mentioned are the defense lawyer Matthew Donkin and Judge Jonathan Gibson, but the central subject is clearly Nesbitt."
+        },
+        "context": {
+          "locations": [
+            "Bingley, West Yorkshire",
+            "Bradford",
+            "Kent Road, Bingley"
+          ],
+          "organisations": [
+            "Little Heroes Cancer Trust"
+          ],
+          "roles_or_occupations": [
+            "founder",
+            "director",
+            "children's cancer charity founder"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article identifies Colin Nesbitt as the founder and director of the Little Heroes Cancer Trust, a children's cancer charity based in Bradford area, specifically Bingley, West Yorkshire. It specifies his home address as Kent Road, Bingley, confirming association with the locations mentioned. These details are consistent with the subject named Colin Nesbitt."
+        },
+        "name_match": {
+          "subject_name_normalized": "colin nesbitt",
+          "article_primary_names": [
+            "Colin Nesbitt"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.9,
+          "reasoning": "The article's main subject is clearly 'Colin Nesbitt', mentioned multiple times, for example: 'Colin Nesbitt, from Bingley, West Yorkshire, was also convicted...' and 'Nesbitt was cleared of three other charges...'. The subject name 'Colin Nesbitt' is an exact match to the screening subject name. The article provides consistent details but no conflicting information; although date of birth is unavailable, the 60-year-old detail does not conflict with screening data. Therefore, this is very likely the same individual."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 60,
+          "age_phrase": "The 60-year-old",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article explicitly states 'The 60-year-old' referring to Colin Nesbitt, providing an explicit age mention but no DOB is given for comparison."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "financial crime",
+            "regulatory action"
+          ],
+          "key_positives": [
+            "Founded a children's cancer charity after his grandson became ill",
+            "Charity received a \u00a3100,000 donation featured on the Channel 4 programme the Secret Millionaire"
+          ],
+          "key_negatives": [
+            "Convicted of stealing over \u00a387,000 from the charity",
+            "Abused his position as a director of the Little Heroes Cancer Trust",
+            "Transferred charity funds into other bank accounts and gave unsecured loans",
+            "Arrested after concerns raised by the Charity Commission",
+            "Jury found guilty after a five-week trial"
+          ],
+          "reasoning": "Article states Colin Nesbitt \"was convicted of stealing over \u00a387,000 from the organisation\" and \"was also convicted of abusing his position as a director.\" It describes transferring funds improperly and involvement of the Charity Commission, indicating credible financial crime and regulatory issues."
+        },
+        "article_text": "Image source, Ben Lack Image caption, Colin Nesbitt was convicted after a five-week trial at Bradford Crown Court The founder of a children's cancer charity has been convicted of stealing over \u00c2\u00a387,000 from the organisation. Colin Nesbitt, from Bingley, West Yorkshire, was also convicted of abusing his position as a director of the Little Heroes Cancer Trust. The 60-year-old denied financially benefiting from charity, but was found guilty after a five-week trial. Nesbitt was cleared of three other charges and will be sentenced on 30 April at Bradford Crown Court. More stories from Yorkshire Prosecutors said the Bradford-based charity had raised funds through sponsored firewalking events, but some of the money was diverted by Nesbitt, who they argued did not allow others to bank money raised for the organisation. They added that in addition to stealing money, Nesbitt had abused his position by transferring thousands of pounds of the charity's funds into other bank accounts, using some of it to provide unsecured loans to two other people. In 2012, the charity and Nesbitt, who founded the organisation after his grandson became ill, featured in the Channel 4 programme the Secret Millionaire and received a \u00c2\u00a3100,000 donation. Nesbitt, of Kent Road, Bingley, was first arrested in October 2015 after concerns were raised about the charity's finances by the Charity Commission. In police interviews, he denied any fraud and said he did not take a wage and rarely claimed expenses. However, he admitted financial management was \"not one of his strengths\". 'Wasn't dishonest' In evidence, Nesbitt told the jury he had put his own money into the charity at the start and admitted it had been hard to keep track of its finances. \"I wasn't careful enough with the money but I wasn't being dishonest,\" he said. Defending, Matthew Donkin said his client had not been living an extravagant lifestyle and said the prosecution case was based on a misunderstanding of how the charity worked. During the trial, Judge Jonathan Gibson directed the jury to acquit Nesbitt in relation to charges of providing false or misleading information to the Charity Commission. The jury also found him not guilty of a further charge of fraud and one of the theft of \u00c2\u00a37,000. Judge Gibson warned Nesbitt a custodial sentence would be under consideration. Follow BBC Yorkshire on Facebook external Twitter and Instagram . Send your story ideas to yorkslincs.news@bbc.co.uk send video here Related topics Bradford Bingley More on this story Children's cancer charity founder 'stole \u00c2\u00a3122,000' Published 16 February 2021 Children's cancer charity founder 'stole \u00c2\u00a3345k' 3 December 2019 Related internet links HM Courts & Tribunals Service The BBC is not responsible for the content of external sites."
+      }
+    }
+  }
+]

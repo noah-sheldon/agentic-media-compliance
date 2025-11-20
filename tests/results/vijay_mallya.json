@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Scandal Rocks CEO 'King of Good Times'",
+    "input": {
+      "title": "Scandal Rocks CEO 'King of Good Times'",
+      "summary": "Vijay Mallya, 'The King of Good Times', faces extradition after Indian and UK authorities pursue charges of loan default and financial fraud.",
+      "subject_names": [
+        "Vijay Mallya",
+        "The King of Good Times"
+      ],
+      "contains_dob": false,
+      "dob_value": null,
+      "contains_age_phrase": false,
+      "sentiment": "negative",
+      "adverse_media_classification": "confirmed wrongdoing",
+      "edge_case_reason": "Subject referred by nickname, confirmed crime.",
+      "article_link": "https://www.bbc.co.uk/news/business-45009459"
+    },
+    "output": {
+      "is_subject_match": true,
+      "match_confidence": 0.925,
+      "overall_risk_label": "high",
+      "decision": "high_risk_escalate",
+      "human_readable_summary": "The article strongly matches Vijay Mallya based on name and contextual details. It presents significant adverse information related to financial crime and fraud allegations against him. Due to clear identity match and serious negative content, this case is escalated as high risk.",
+      "audit_notes": "- NameMatchResult: High confidence match (0.95) on primary subject name Vijay Mallya with consistent context. - DobAgeMatchResult: No DOB but age info noted; confidence 0.9, no contradictory info but identity consistency uncertain. - SentimentResult: Clearly adverse media with credible allegations of fraud and financial crime, supporting high risk escalation.",
+      "details": {
+        "metadata": {
+          "title": "Vijay Mallya faces UK extradition to India over fraud charges",
+          "published_date": "2018-05-31",
+          "section": "Business",
+          "source_domain": "bbc.co.uk",
+          "is_recent": false,
+          "reasoning": "The article is from BBC (bbc.co.uk) under a business reporter; the text includes 'Published 31 May 2018' indicating the publication date. The content discusses financial scandals and extradition related to Vijay Mallya, fitting a Business section. The date is not recent as of 2024, so is_recent is false."
+        },
+        "people": {
+          "main_person": "Vijay Mallya",
+          "other_people": [
+            "Daniel Thomas",
+            "Diageo"
+          ],
+          "author_names": [
+            "Daniel Thomas"
+          ],
+          "reasoning": "The article is centrally about Vijay Mallya, focusing on his financial scandals, extradition case, business ventures, and political career. Daniel Thomas is identified as the reporter, and Diageo is mentioned as a company suing Mallya, placing them as other people/entities involved but not the main subject."
+        },
+        "context": {
+          "locations": [
+            "India",
+            "United Kingdom"
+          ],
+          "organisations": [
+            "United Breweries Group",
+            "Kingfisher Airlines",
+            "United Spirits",
+            "Diageo",
+            "Force India",
+            "Royal Challengers Bangalore"
+          ],
+          "roles_or_occupations": [
+            "businessman",
+            "chairman of United Breweries Group",
+            "founder of Kingfisher Airlines",
+            "chairman of United Spirits",
+            "co-founder of Formula 1 team Force India",
+            "owner of Royal Challengers Bangalore cricket franchise",
+            "member of upper house of India's parliament"
+          ],
+          "subject_context_consistent": true,
+          "confidence": 0.95,
+          "reasoning": "The article clearly identifies Vijay Mallya as an Indian tycoon associated with multiple organizations including United Breweries Group, Kingfisher Airlines, and others. It also outlines roles such as businessman, chairman, co-founder, and politician, all consistent with the subject known as Vijay Mallya. Locations mentioned are India and the UK, matching his known whereabouts involved with legal proceedings."
+        },
+        "name_match": {
+          "subject_name_normalized": "vijay mallya",
+          "article_primary_names": [
+            "Vijay Mallya"
+          ],
+          "is_name_potential_match": true,
+          "confidence": 0.95,
+          "reasoning": "The main subject of the article is identified as Vijay Mallya, described as an Indian tycoon involved in financial scandals, matching the subject's name exactly. The article states, 'controversial Indian tycoon Vijay Mallya' and 'Mr Mallya became chairman of conglomerate United Breweries Group,' confirming he is the primary individual discussed. There are no conflicting details in terms of identity; the article's context aligns with the known information about Vijay Mallya as a businessman with notable financial controversies. Therefore, it is a strong potential match."
+        },
+        "dob_age": {
+          "dob_in_article": null,
+          "age_in_article": 28,
+          "age_phrase": "aged just 28",
+          "is_dob_or_age_consistent": null,
+          "confidence": 0.9,
+          "reasoning": "The article states 'became chairman of conglomerate United Breweries Group in 1983 aged just 28'. There is no subject DOB provided to check consistency, but the explicit age mention is noted."
+        },
+        "sentiment": {
+          "overall_sentiment": "negative",
+          "is_adverse_media": true,
+          "adverse_categories": [
+            "fraud",
+            "financial crime"
+          ],
+          "key_positives": [
+            "Chairman of United Breweries Group since 1983",
+            "Co-founded Force India Formula 1 team",
+            "Owned Indian Premier League cricket team Royal Challengers Bangalore",
+            "Member of India's upper house of parliament, elected twice"
+          ],
+          "key_negatives": [
+            "Accused of fleeing India after defaulting on debts over $1bn",
+            "London court ruled he should be extradited to India facing fraud charges",
+            "Forced to resign as chairman of United Spirits after being accused of financial wrongdoing",
+            "Diageo suing him over $181m payments",
+            "Kingfisher Airlines debts of over $1bn unpaid, pilots and cabin crew unpaid for 15 months",
+            "Indian banks seeking to recover more than $1bn loans",
+            "Fraud office investigating alleged loan funneling and asset hiding"
+          ],
+          "reasoning": "The article states that Vijay Mallya is facing credible allegations and legal actions related to significant debt defaults and fraud charges, e.g., 'a London court has now ruled he should be extradited... where he faces fraud charges', 'Diageo accused him of financial wrongdoing', 'a group of Indian banks are seeking to recover more than $1bn of loans', and 'India's fraud office is investigating claims he funnelled loans... and hid personal assets.' These represent clear adverse media relevant to financial crime, despite his denials and past positive roles."
+        },
+        "article_text": "Image source, Reuters Image caption, Vijay Mallya denies the allegations against him Daniel Thomas Business reporter, BBC News Once called the \"King of Good Times\" due to his extravagant lifestyle, controversial Indian tycoon Vijay Mallya has been embroiled in financial scandals since 2012. Accused of fleeing from India in 2016 after defaulting on debts of more than $1bn (\u00c2\u00a3785m), a London court has now ruled he should be extradited from the UK to India where he faces fraud charges - charges he denies. The extradition ruling will be passed to the Home Secretary for approval. If he is sent home from the UK and found guilty, it will be a spectacular fall from grace for a man whose lifestyle brands have achieved global recognition and who has even spent time as a politician. Mr Mallya became chairman of conglomerate United Breweries Group in 1983 aged just 28, inheriting the job when his father died. Getty Images Kingfisher Airlines racked up huge debts It is best known for producing Kingfisher, India's most popular beer, but has also branched out into chemicals, paints and publishing, buying The Asian Age newspaper and Bollywood film magazine Cine Blitz. However, the businessman's more recent ventures have courted controversy. Mallya resigns as Force India director Tycoon Vijay Mallya guilty of contempt India tycoon has passport revoked Kingfisher Airlines, launched in 2005, grew to become India's second largest domestic carrier, but racked up debts of more than $1bn (\u00c2\u00a3755m) - much of which remains outstanding. It was wound down in 2012 amid reports that pilots and cabin crew had worked unpaid for 15 months. Mr Mallya was also forced to resign as chairman of United Spirits, India's biggest distiller, after its new owner Diageo accused him of financial wrongdoing. Diageo is now suing the tycoon to recover payments worth $181m. AFP Mr Mallya has also had a political career Despite the controversies Mr Mallya has maintained his trademark flamboyance and indulged his passions. He helped co-found a Formula 1 team, Force India (although it went into administration in July when his assets were frozen), and bought Indian Premier League cricket franchise Royal Challengers Bangalore for more than \u00c2\u00a370m. He was even a member of the upper house of India's parliament, elected in 2002 and then again in 2010. He quit in 2016 amid allegations of wrongdoing. Since then his creditors and regulators have been closing in. A group of Indian banks are seeking to recover more than $1bn of loans granted to his defunct Kingfisher Airlines. And India's fraud office is investigating claims he funnelled loans to the struggling airline via other firms, and hid personal assets. The businessman has denied all allegations, labelling the investigation against him as a \"witch hunt\". More on this story Attribution Sport Published 31 May 2018 9 May 2017 25 April 2016"
+      }
+    }
+  }
+]

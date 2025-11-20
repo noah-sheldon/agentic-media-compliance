@@ -1,0 +1,74 @@
+[
+  {
+    "edge_case_type": "Full name match",
+    "title": "Person Convicted of Bank Fraud",
+    "summary": "Joseph Mason, 47, was convicted on nine counts of bank fraud totalling over £25,000. He appeared at Wolverhampton Magistrates' Court and received a custodial sentence.",
+    "subject_names": ["Joseph Mason"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/articles/cdeg8enengxo"
+  },
+  {
+    "edge_case_type": "False allegation",
+    "title": "Celebrity Claims Damaging Allegations Were False",
+    "summary": "Noel Clarke claims he faced life-altering financial losses after the Guardian published misconduct allegations, which he contests are false and defamatory.",
+    "subject_names": ["Noel Clarke"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/entertainment-arts-66122841"
+  },
+  {
+    "edge_case_type": "Founder raising money—negative",
+    "title": "Charity Founder Convicted of Theft",
+    "summary": "Colin Nesbitt, founder of Little Heroes Cancer Trust, was found guilty of stealing £87,000 from the children’s cancer charity he ran.",
+    "subject_names": ["Colin Nesbitt"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/uk-england-leeds-56500262"
+  },
+  {
+    "edge_case_type": "Nickname/alias identity",
+    "title": "Crypto Fraudster Known as 'The Goddess of Wealth'",
+    "summary": "Chinese national Qian Zhimin, known as 'the goddess of wealth', was convicted of money laundering after UK police seized over £5bn in crypto.",
+    "subject_names": ["Qian Zhimin", "the goddess of wealth"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/articles/cy0415kk3rzo"
+  },
+  {
+    "edge_case_type": "Organisation as main subject, person named",
+    "title": "Builder Convicted Amid Organisational Failures",
+    "summary": "Mark Killick, described as a 'cowboy builder', was convicted of fraud while the article discusses failures that allowed him to keep operating.",
+    "subject_names": ["Mark Killick"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/articles/cg43q3rl3q7o"
+  },
+  {
+    "edge_case_type": "Conflicting DOB vs age",
+    "title": "Age/Date Confusion in Money Laundering Case",
+    "summary": "Nicola Rowe, sentenced for laundering timeshare fraud proceeds, had conflicting age and DOB details listed between court and press reporting.",
+    "subject_names": ["Nicola Rowe"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/articles/cvgvxg47gl6o"
+  },
+  {
+    "edge_case_type": "Historic crime, deceased subject",
+    "title": "Mafia Boss Dies in Prison",
+    "summary": "Matteo Messina Denaro, the infamous Cosa Nostra boss convicted of murders in the 1990s, died in jail. Coverage notes both his crimes and passing.",
+    "subject_names": ["Matteo Messina Denaro"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/world-europe-66909616"
+  },
+  {
+    "edge_case_type": "Nickname identity",
+    "title": "Scandal Rocks CEO 'King of Good Times'",
+    "summary": "Vijay Mallya, 'The King of Good Times', faces extradition after authorities pursue charges of loan default and financial fraud.",
+    "subject_names": ["Vijay Mallya", "The King of Good Times"],
+    "contains_dob": false,
+    "dob_value": null,
+    "article_link": "https://www.bbc.co.uk/news/business-45009459"
+  }
+]
